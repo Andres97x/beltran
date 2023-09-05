@@ -1,0 +1,29 @@
+.feature {
+  background-color: var(--bg-secondary);
+  color: #888;
+}
+
+.feature-container {
+  max-width: 120rem;
+  padding: 3.2rem 4rem;
+  margin: 0 auto;
+}
+
+.feature-title {
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feature-logos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.feature-logos img {
+  height: 3.2rem;
+  filter: brightness(0) invert(1);
+  opacity: 50%;
+  color: white;
+}

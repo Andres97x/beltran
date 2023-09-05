@@ -1,0 +1,78 @@
+.contact {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 3.2rem 14rem 3.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.5rem;
+  width: 50%;
+}
+
+input,
+.form > button {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  border: 1px solid #b0b0b1;
+  border-radius: 5px;
+  background-color: var(--bg-general);
+  width: 100%;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+label span {
+  font-size: 1.3rem;
+  color: #adb5bd;
+  font-style: italic;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: #adb5bd;
+}
+
+.name-container {
+  display: flex;
+}
+
+#first-name {
+  width: 68%;
+}
+
+#last-name {
+  width: 30%;
+  margin-left: auto;
+}
+
+.form > button {
+  background-color: #6f58c9;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.form > button:hover {
+  background-color: var(--bg-general);
+  color: #6f58c9;
+  outline: 1.5px solid #6f58c9;
+}
+
+input:focus {
+  outline: 1.5px solid #6f58c9;
+}
+
+.form > button:focus {
+  outline: 2px solid lightslategray;
+}

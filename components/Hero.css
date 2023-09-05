@@ -1,0 +1,142 @@
+.hero {
+  max-width: 135rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+  position: relative;
+}
+
+.hero.fix-jump {
+  padding-top: 11rem;
+}
+
+.hero-logo__text {
+  margin-top: 2.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  max-width: 60rem;
+  margin: 0 auto;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 6rem;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  letter-spacing: -3px;
+  position: relative;
+  z-index: 50;
+}
+
+.hero-text span {
+  font-family: 'Italianno', cursive;
+  text-transform: none;
+  font-size: 8rem;
+  letter-spacing: -3px;
+}
+
+.hero-paragraph {
+  overflow: hidden;
+}
+
+.paragraph-text {
+  opacity: 0;
+  animation: from-below 0.5s ease-out calc(var(--delay) * 100ms),
+    fade-hero-para 0.7s linear calc(var(--delay) * 100ms),
+    reveal-text 0s linear calc(var(--delay) * 100ms) forwards;
+}
+
+@keyframes from-below {
+  from {
+    transform: translateY(110%);
+  }
+}
+
+@keyframes fade-hero-para {
+  from {
+    filter: blur(3px);
+  }
+}
+
+@keyframes reveal-text {
+  to {
+    opacity: 1;
+  }
+}
+
+.last-sentence {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-paragraph {
+  transform: translateY(-0.7rem);
+}
+
+.hero-gallery {
+  position: relative;
+  transform: translateY(-4.5rem);
+  display: flex;
+  justify-content: center;
+  height: 50rem;
+  z-index: 10;
+}
+
+.hero-img__container {
+  /* width: 22.3%; */
+  width: 25%;
+  margin: 0 auto;
+  position: absolute;
+  transition: transform 0.8s, filter 1.5s;
+}
+
+.fade-hero-gallery {
+  animation: fade-hero-gallery 1.2s ease 1 forwards;
+}
+
+@keyframes fade-hero-gallery {
+  from {
+    transform: translateX(-50px);
+    filter: blur(4px);
+  }
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.hero-btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  padding-bottom: 5rem;
+}
+
+.hero-btn {
+  font-size: 6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  width: 6rem;
+  height: 6rem;
+}
+
+.hero-btn:disabled {
+  color: inherit;
+}
+
+.hero-btn:active {
+  font-size: 5.5rem;
+}

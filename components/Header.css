@@ -1,0 +1,120 @@
+/*temporary*/
+.flex-auxiliar {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+}
+
+.header {
+  margin: 0 auto;
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+  border-bottom: 1px solid #bbb;
+  animation: from-above 0.8s;
+  z-index: 300;
+}
+
+.header.sticky {
+  position: fixed;
+  opacity: 0;
+  background-color: rgb(241, 243, 245, 0.95);
+  box-shadow: 0 2px 15px 4px rgba(0, 0, 0, 0.15);
+  animation: fade-nav-sticky 0.25s linear 1 forwards;
+}
+
+@keyframes fade-nav-sticky {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes from-above {
+  from {
+    transform: translateY(-200%);
+  }
+}
+
+.header-text {
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 900;
+  color: inherit;
+}
+
+.header-nav__items {
+  display: flex;
+  list-style: none;
+  gap: 8.5rem;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.header-nav__item {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  padding-bottom: 2px;
+  overflow: hidden;
+}
+
+.nav-link:link,
+.nav-link:visited,
+.nav-link:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-text-title);
+}
+
+.header .header-nav__item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background-color: #222;
+  height: 2px;
+  width: 100%;
+  z-index: 1;
+  transform: translate(-101%, 0px);
+  transition: all 0.5s;
+}
+
+.header-nav__item:hover.header-nav__item::before {
+  transform: translate(0, 0px);
+}
+
+.header-text span {
+  font-family: 'Grandiflora One', serif;
+}
+
+.header-icon {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  position: relative;
+
+  display: none;
+}
+
+.header-icon__line {
+  background-color: var(--color-text-title);
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  transform: translateY(-50%);
+  border-radius: 1000px;
+}
+
+.header-icon__line:nth-child(1) {
+  top: 33%;
+}
+
+.header-icon__line:nth-child(2) {
+  top: 66%;
+}
