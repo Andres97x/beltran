@@ -1,11 +1,12 @@
 .feature {
-  background-color: var(--bg-secondary);
+  /* background-color: var(--bg-secondary); */
+  background-color: var(--bg-general);
   color: #888;
 }
 
 .feature-container {
-  max-width: 120rem;
-  padding: 3.2rem 4rem;
+  max-width: 100%;
+  padding: 3.2rem 6rem;
   margin: 0 auto;
 }
 
@@ -17,13 +18,12 @@
 
 .feature-logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 3rem;
 }
 
 .feature-logos img {
   height: 3.2rem;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(0);
   opacity: 50%;
-  color: white;
 }

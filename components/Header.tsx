@@ -7,9 +7,7 @@ const Header: FC = () => {
 
   return (
     <div ref={headerRef} className='header'>
-      <div className='header-text'>
-        Gila <span>&</span> Group
-      </div>
+      <div className='header-text'>Beltran</div>
       <nav className={`header-nav ${navOpen ? 'header-open' : ''}`}>
         <ul className='header-nav__items'>
           <li className='header-nav__item'>

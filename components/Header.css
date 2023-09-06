@@ -6,6 +6,7 @@
 }
 
 .header {
+  position: absolute;
   margin: 0 auto;
   height: 8rem;
   width: 100%;
@@ -13,18 +14,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 6rem;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 0.1px solid #bbbbbb58;
   animation: from-above 0.8s;
   z-index: 300;
+  background-color: transparent;
+  color: white;
 }
 
-.header.sticky {
+/* .header.sticky {
   position: fixed;
   opacity: 0;
   background-color: rgb(241, 243, 245, 0.95);
+  color: var(--color-text-title);
+  border-bottom: 1px solid #bbb;
   box-shadow: 0 2px 15px 4px rgba(0, 0, 0, 0.15);
   animation: fade-nav-sticky 0.25s linear 1 forwards;
-}
+} */
 
 @keyframes fade-nav-sticky {
   to {
@@ -38,11 +43,16 @@
   }
 }
 
+@font-face {
+  font-family: beto-light;
+  src: url(../public/BentonSans\ Light.otf);
+}
+
 .header-text {
   text-transform: uppercase;
   font-size: 2.3rem;
-  font-family: 'Nanum Myeongjo', serif;
-  font-weight: 900;
+  font-family: beto-light, serif;
+  font-weight: 400;
   color: inherit;
 }
 
@@ -69,15 +79,15 @@
   text-decoration: none;
 }
 
-.nav-link:hover {
+/* .nav-link:hover {
   color: var(--color-text-title);
-}
+} */
 
 .header .header-nav__item::before {
   content: '';
   position: absolute;
   bottom: 0;
-  background-color: #222;
+  background-color: white;
   height: 2px;
   width: 100%;
   z-index: 1;
@@ -87,10 +97,6 @@
 
 .header-nav__item:hover.header-nav__item::before {
   transform: translate(0, 0px);
-}
-
-.header-text span {
-  font-family: 'Grandiflora One', serif;
 }
 
 .header-icon {

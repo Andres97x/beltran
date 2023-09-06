@@ -1,123 +1,37 @@
-import { useState, useEffect, FC } from 'react';
+import { useRef, useEffect, FC } from 'react';
 import './Hero.css';
-import Carousel from './Carousel';
-import { heroImagesData } from '../imagesData';
 
-const FACTOR: number = 120;
-type ImagesData = { image: string; id: number }[];
+import { videosData } from '../videosData';
 
 const Hero: FC = () => {
-  const [images, setImages] = useState<ImagesData>(heroImagesData);
-  const [direction, setDirection] = useState('right');
-  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const video = videosData[0].video;
+  const heroRef = useRef<HTMLVideoElement | null>(null);
+  const heroTextRef = useRef<HTMLDivElement | null>(null);
 
+  let scrollYPos = window.scrollY;
   useEffect(() => {
-    setTimeout(() => {
-      setButtonDisabled(false);
-    }, 1500);
-  }, []);
+    document.addEventListener('scroll', () => {
+      scrollYPos = window.scrollY;
 
-  const curSlide = 2;
+      let heroOpacity = 1.5 - scrollYPos / 550;
+      if (heroOpacity < 0) heroOpacity = 0;
+      if (heroRef.current) heroRef.current.style.opacity = `${heroOpacity}`;
 
-  function setSlides(direction: string) {
-    setImages(prevImages => {
-      const poppedElement = prevImages[0];
-      const newArray = prevImages.slice(1);
-      newArray.push(poppedElement);
-      setDirection(direction);
-      return newArray;
+      let heroTextOpacity = 1 - scrollYPos / 300;
+      if (heroTextOpacity < 0) heroTextOpacity = 0;
+      if (heroTextRef.current)
+        heroTextRef.current.style.opacity = `${heroTextOpacity}`;
     });
-  }
-
-  function prevSlide() {
-    setSlides('left');
-  }
-
-  function nextSlide() {
-    setSlides('right');
-  }
-
-  const galleryEl = images.map((image, i: number) => {
-    const condition = () => {
-      if (FACTOR * (i - curSlide) === 0) {
-        return { scale: 1, index: 100, blur: 0 };
-      } else if (FACTOR * (i - curSlide) === FACTOR) {
-        return { scale: 0.7, index: 50, blur: 1.5 };
-      } else if (FACTOR * (i - curSlide) === -FACTOR) {
-        return { scale: 0.7, index: 50, blur: 1.5 };
-      } else if (FACTOR * (i - curSlide) === FACTOR * 2) {
-        return { scale: 0.5, index: 20, blur: 4 };
-      } else if (FACTOR * (i - curSlide) === -FACTOR * 2) {
-        return { scale: 0.5, index: 20, blur: 4 };
-      }
-    };
-
-    const style = {
-      transform: `scale(${condition()?.scale}) translateX(${
-        direction === 'right'
-          ? FACTOR * (i - curSlide)
-          : FACTOR * -(i - curSlide)
-      }% `,
-      zIndex: condition()?.index,
-      filter: `blur(${condition()?.blur}px)`,
-    };
-
-    return (
-      <Carousel
-        key={image.id}
-        style={style}
-        image={image.image}
-        prevSlide={prevSlide}
-        nextSlide={nextSlide}
-      />
-    );
-  });
+  }, []);
 
   return (
     <div className='hero'>
-      <div className='hero-text'>
-        <div className='hero-paragraph'>
-          <div
-            className='paragraph-text'
-            style={{ '--delay': 0 } as React.CSSProperties}
-          >
-            <span>— Tu</span> casa
-          </div>
-        </div>
-        <div className='hero-paragraph'>
-          <div
-            className='paragraph-text'
-            style={{ '--delay': 1.1 } as React.CSSProperties}
-          >
-            como siempre la <span>has</span>
-          </div>
-        </div>
-        <div className='hero-paragraph last-paragraph'>
-          <div
-            className='paragraph-text last-sentence'
-            style={{ '--delay': 2.2 } as React.CSSProperties}
-          >
-            soñado
-            <span> —</span>
-          </div>
-        </div>
-      </div>
-      <div className='hero-gallery'>{galleryEl}</div>
-      <div className='hero-btn__container'>
-        <button
-          disabled={buttonDisabled}
-          onClick={prevSlide}
-          className='hero-btn hero-btn__left'
-        >
-          ←
-        </button>
-        <button
-          disabled={buttonDisabled}
-          onClick={nextSlide}
-          className='hero-btn hero-btn__right'
-        >
-          →
-        </button>
+      <video ref={heroRef} src={video} autoPlay loop muted />
+      <div ref={heroTextRef} className='hero-text'>
+        <span className='sub-heading__hero'>Project</span>
+        <h1 className='h1'>
+          High Line - Moynihan Connector Opens in New York City
+        </h1>
       </div>
     </div>
   );

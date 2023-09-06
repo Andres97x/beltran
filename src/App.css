@@ -22,44 +22,38 @@ html {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: beto-bold;
+  src: url(../public/BentonSans\ Bold.otf);
+}
+
+@font-face {
+  font-family: beto-book;
+  src: url(../public/BentonSans\ Book.otf);
+}
+
+@font-face {
+  font-family: beto-light;
+  src: url(../public/BentonSans\ Light.otf);
+}
+
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: beto-book, sans-serif;
+  font-weight: 800;
   line-height: 1;
   color: var(--color-text-general);
   background-color: var(--bg-general);
   overflow-x: hidden;
 }
 
-.header-hero {
-  background-image: radial-gradient(
-    circle,
-    #f1f3f5,
-    #edf0f2,
-    #eaedef,
-    #e6e9ed,
-    #e3e6ea,
-    #e0e5eb,
-    #dde3ed,
-    #dae2ee,
-    #d9e1f4,
-    #dbe0f8,
-    #dfdefc,
-    #e5dbff
-  );
-
-  color: var(--color-text-title);
-}
-
 .sub-heading {
   display: block;
+  font-family: beto-bold;
   font-size: 1.8rem;
-  font-weight: 800;
   color: var(--color-subheading);
   text-transform: uppercase;
   margin-bottom: 1.8rem;
   letter-spacing: 0.2px;
-
-  /* background-image: linear-gradient(180deg, #b6b8d6, #6f58c9); */
 
   background: linear-gradient(
     to right,
@@ -81,13 +75,22 @@ body {
   background-size: 200%;
 }
 
+.h1 {
+  font-family: beto-light, sans-serif;
+  font-size: 4.8rem;
+  font-weight: 400;
+  color: var(--bg-general);
+  margin-top: 2rem;
+  line-height: 1.3;
+}
+
 .h2 {
+  font-family: beto-light, serif;
   font-size: 4.4rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
   color: var(--color-text-title);
   max-width: 70rem;
-  font-family: 'Nanum Myeongjo', serif;
 }
 
 .h2.dark {

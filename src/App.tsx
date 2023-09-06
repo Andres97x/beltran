@@ -29,29 +29,29 @@ const App: FC = () => {
     });
 
     // Sticky navigation
-    const header = document.querySelector('.header') as HTMLElement;
-    const wholeInitialSection = document.querySelector('.header-hero');
-    const hero = document.querySelector('.hero');
+    // const header = document.querySelector('.header') as HTMLElement;
+    // const wholeInitialSection = document.querySelector('.header-hero');
+    // const hero = document.querySelector('.hero');
 
-    const sticky = (entries: IntersectionObserverEntry[]) => {
-      const [entry] = entries;
-      if (entry.isIntersecting) {
-        header?.classList.remove('sticky');
-        hero?.classList.remove('fix-jump');
-      }
-      if (!entry.isIntersecting) {
-        header?.classList.add('sticky');
-        hero?.classList.add('fix-jump');
-      }
-    };
+    // const sticky = (entries: IntersectionObserverEntry[]) => {
+    //   const [entry] = entries;
+    //   if (entry.isIntersecting) {
+    //     header?.classList.remove('sticky');
+    //     hero?.classList.remove('fix-jump');
+    //   }
+    //   if (!entry.isIntersecting) {
+    //     header?.classList.add('sticky');
+    //     hero?.classList.add('fix-jump');
+    //   }
+    // };
 
-    const stickyObserver = new IntersectionObserver(sticky, {
-      root: null,
-      threshold: 0,
-      rootMargin: `${-5}px`,
-    });
+    // const stickyObserver = new IntersectionObserver(sticky, {
+    //   root: null,
+    //   threshold: 0,
+    //   rootMargin: `${-5}px`,
+    // });
 
-    if (wholeInitialSection) stickyObserver.observe(wholeInitialSection);
+    // if (wholeInitialSection) stickyObserver.observe(wholeInitialSection);
 
     // revealing sections
     const sections = document.querySelectorAll('.section');
@@ -109,10 +109,12 @@ const App: FC = () => {
   return (
     <div className='app-container'>
       <div className='header-hero'>
-        <Header />
-        <Hero />
-        <Feature />
+        <div className='header-hero__wrapper'>
+          <Header />
+          <Hero />
+        </div>
       </div>
+      <Feature />
       <div className='section'>
         <SectionInfo
           subheading='services'
