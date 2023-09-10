@@ -1,10 +1,6 @@
 import { FC, useRef, useEffect } from 'react';
 
 import './Testimonials.css';
-import testimonial1 from '../src/assets/testimonial-1.jpg';
-import testimonial2 from '../src/assets/testimonial-2.jpg';
-import testimonial3 from '../src/assets/testimonial-3.jpg';
-import TestimonialCard from './TestimonialCard';
 
 import tg1 from '../src/assets/testimonial-g-1.jpg';
 import tg2 from '../src/assets/testimonial-g-2.jpg';
@@ -41,34 +37,13 @@ const Testimonials: FC = () => {
 
   return (
     <div className='testimonials'>
-      <div className='testimonial-cards'>
-        <TestimonialCard
-          src={testimonial1}
-          styles={{ bg: 'blue' }}
-          author={{
-            text: "Thanks guys, keep up the good work! Chammer should be nominated for service of the year, You won't regret it.",
-            name: 'Alberto Donko',
-            job: 'CEO. squareround',
-          }}
-        />
-        <TestimonialCard
-          src={testimonial2}
-          styles={{ bg: 'red', reverse: 'reverse' }}
-          author={{
-            text: 'You made it so simple. My new site is so much faster and easier to work with than my old site',
-            name: 'Jennifer Aniston',
-            job: 'CEO. marvel studios',
-          }}
-        />
-        <TestimonialCard
-          src={testimonial3}
-          styles={{ bg: 'yellow' }}
-          author={{
-            text: 'I just wanted to share a quick note and let you know that you guys do a really good job.',
-            name: 'Sandra Bullock',
-            job: 'CEO. spaceX',
-          }}
-        />
+      <div className='testimonial-text'>
+        <p>
+          <span>‟</span> Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Nostrum ipsum minus fuga voluptate, cumque ullam obcaecati
+          aspernatur ducimus consequatur nemo veritatis dolores praesentium
+          voluptatem voluptatibus ad impedit odit atque modi.”
+        </p>
       </div>
       <div ref={testimonialRef} className='testimonial-gallery'>
         <img

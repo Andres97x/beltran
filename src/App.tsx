@@ -8,7 +8,6 @@ import Projects from '../components/Projects';
 import SectionInfo from '../components/SectionInfo';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const App: FC = () => {
@@ -28,30 +27,26 @@ const App: FC = () => {
           ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 
-    // Sticky navigation
-    // const header = document.querySelector('.header') as HTMLElement;
-    // const wholeInitialSection = document.querySelector('.header-hero');
-    // const hero = document.querySelector('.hero');
+    // show/hide navbar
+    let lastScrollTop = 0;
+    const header: HTMLDivElement | null = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    // const sticky = (entries: IntersectionObserverEntry[]) => {
-    //   const [entry] = entries;
-    //   if (entry.isIntersecting) {
-    //     header?.classList.remove('sticky');
-    //     hero?.classList.remove('fix-jump');
-    //   }
-    //   if (!entry.isIntersecting) {
-    //     header?.classList.add('sticky');
-    //     hero?.classList.add('fix-jump');
-    //   }
-    // };
+      if (scrollTop > lastScrollTop) {
+        if (header) header.style.top = '-8rem';
+      } else {
+        if (header) header.style.top = '0';
+      }
+      lastScrollTop = scrollTop;
 
-    // const stickyObserver = new IntersectionObserver(sticky, {
-    //   root: null,
-    //   threshold: 0,
-    //   rootMargin: `${-5}px`,
-    // });
-
-    // if (wholeInitialSection) stickyObserver.observe(wholeInitialSection);
+      // navbar transparency
+      if (window.scrollY > 300) {
+        if (header) header.style.backgroundColor = 'rgba(51, 51, 51)';
+      } else {
+        if (header) header.style.backgroundColor = 'rgba(51, 51, 51, 0.58)';
+      }
+    });
 
     // revealing sections
     const sections = document.querySelectorAll('.section');
@@ -80,25 +75,27 @@ const App: FC = () => {
 
     // lazy-loading images
     const images = document.querySelectorAll('img[data-src]');
+
     const options = {
       root: null,
       threshold: 0,
-      rootMargin: '300px',
+      // rootMargin: '-200px',
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-      const [entry] = entries;
-      const target = entry.target as HTMLImageElement;
+      entries.forEach(entry => {
+        const target = entry.target as HTMLImageElement;
 
-      if (!entry.isIntersecting) return;
-      // replace src with data-src
-      if (target.dataset.src) target.src = target.dataset.src;
+        if (!entry.isIntersecting) return;
+        // replace src with data-src
+        if (target.dataset.src) target.src = target.dataset.src;
 
-      target.addEventListener('load', () => {
-        target.classList.remove('lazy-img__blurred');
+        target.addEventListener('load', () => {
+          target.classList.remove('lazy-img__blurred');
+        });
+
+        observer.unobserve(target);
       });
-
-      observer.unobserve(target);
     }, options);
 
     images.forEach(img => {
@@ -109,12 +106,12 @@ const App: FC = () => {
   return (
     <div className='app-container'>
       <div className='header-hero'>
-        <div className='header-hero__wrapper'>
-          <Header />
+        <Header />
+        <div className='hero-wrapper'>
           <Hero />
         </div>
       </div>
-      <Feature />
+
       <div className='section'>
         <SectionInfo
           subheading='services'
@@ -123,6 +120,7 @@ const App: FC = () => {
         />
         <Services />
       </div>
+
       <div className='section'>
         <SectionInfo
           classes={{ wide: 'section-projects' }}
@@ -132,6 +130,7 @@ const App: FC = () => {
         />
         <Projects />
       </div>
+
       <div className='section'>
         <div className='testimonials-container'>
           <SectionInfo
@@ -143,14 +142,15 @@ const App: FC = () => {
           <Testimonials />
         </div>
       </div>
-      <div className='section'>
+      {/* <div className='section'>
         <SectionInfo
           subheading='Contact'
           h2='Get in touch with us'
           number='4'
         />
         <Contact />
-      </div>
+      </div> */}
+      <Feature />
       <Footer />
     </div>
   );

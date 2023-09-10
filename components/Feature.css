@@ -1,7 +1,8 @@
 .feature {
-  /* background-color: var(--bg-secondary); */
   background-color: var(--bg-general);
   color: #888;
+  position: relative;
+  z-index: 100;
 }
 
 .feature-container {

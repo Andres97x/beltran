@@ -13,14 +13,15 @@ const Hero: FC = () => {
     document.addEventListener('scroll', () => {
       scrollYPos = window.scrollY;
 
-      let heroOpacity = 1.5 - scrollYPos / 550;
+      let heroOpacity = 1.5 - scrollYPos / 600;
       if (heroOpacity < 0) heroOpacity = 0;
       if (heroRef.current) heroRef.current.style.opacity = `${heroOpacity}`;
 
-      let heroTextOpacity = 1 - scrollYPos / 300;
+      let heroTextOpacity = 1 - scrollYPos / 400;
       if (heroTextOpacity < 0) heroTextOpacity = 0;
-      if (heroTextRef.current)
+      if (heroTextRef.current) {
         heroTextRef.current.style.opacity = `${heroTextOpacity}`;
+      }
     });
   }, []);
 

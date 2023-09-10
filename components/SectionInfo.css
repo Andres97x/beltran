@@ -1,12 +1,7 @@
 .section-info {
-  max-width: 120rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 6rem;
   padding-top: 13rem;
-}
-
-.section-info.section-projects {
-  max-width: 180rem;
 }
 
 .section-info.center {

@@ -12,7 +12,7 @@ const Footer: FC = () => {
     <div className='footer'>
       <div className='footer-container'>
         <div className='socials-col'>
-          <div className='footer-logo__text'>GILA & GROUP</div>
+          <div className='header-text'>BELTRAN</div>
           <div className='social-icons'>
             <AiOutlineWhatsApp className='social-icon' />
             <AiOutlineFacebook className='social-icon' />

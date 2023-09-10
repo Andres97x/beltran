@@ -1,8 +1,7 @@
 .projects {
-  max-width: 180rem;
   margin: 0 auto;
-  margin-top: 3rem;
-  padding: 0 3.2rem;
+  margin-top: 7rem;
+  padding: 0 6rem;
   display: flex;
   flex-direction: column;
 }
@@ -36,7 +35,7 @@
 
 /* dim elements that aren't hovered */
 .projects-container:hover .project:not(:hover) {
-  opacity: 0.4;
+  opacity: 0.65;
 }
 
 .project::after {
