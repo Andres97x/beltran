@@ -113,10 +113,6 @@
   display: none;
 }
 
-.header-icon.header-open {
-  background-color: red;
-}
-
 .header-icon__line {
   background-color: white;
   width: 100%;

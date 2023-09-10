@@ -5,6 +5,13 @@ const Header: FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const [navOpen, setNavOpen] = useState(false);
 
+  // disable scrolling while mobile nav is open
+  if (navOpen) {
+    document.documentElement.style.overflow = 'hidden';
+  } else {
+    document.documentElement.style.overflow = 'auto';
+  }
+
   return (
     <div ref={headerRef} className='header'>
       <div className='header-text'>Beltran</div>

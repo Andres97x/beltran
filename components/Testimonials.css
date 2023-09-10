@@ -28,9 +28,7 @@
   position: absolute;
   top: 0;
   font-size: 15rem;
-  transform: translate(-20%, -60%);
-
-  /* display: inline-block; */
+  transform: translate(-20%, -50%);
 }
 
 /* GALLERY */
