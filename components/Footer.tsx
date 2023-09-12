@@ -9,7 +9,7 @@ import {
 
 const Footer: FC = () => {
   return (
-    <div className='footer'>
+    <div className='footer' id='section-4'>
       <div className='footer-container'>
         <div className='socials-col'>
           <div className='header-text'>BELTRAN</div>

@@ -20,6 +20,7 @@ const App: FC = () => {
       const target = e.target as Element;
       if (!target.classList.contains('nav-link')) return;
       const id = target.getAttribute('href');
+      console.log(id);
 
       if (id)
         document

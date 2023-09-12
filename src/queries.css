@@ -128,7 +128,8 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .project {
-    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
   }
 
   .project-country {
@@ -145,7 +146,11 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .project-facts {
-    display: none;
+    grid-row: 2;
+    grid-column: 1 / -1;
+    margin-left: 0;
+    justify-content: start;
+    margin-top: 1.5rem;
   }
 
   /* MOBILE NAVIGATION */
@@ -395,12 +400,48 @@ Insted we assume that 1rem = 1em = 16px */
     margin-bottom: 2rem;
   }
 
+  .projects-header > div:nth-child(2) {
+    display: none;
+  }
+
   .project {
-    grid-template-columns: 1fr 0.2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .more-container {
+    grid-row: -1;
+  }
+
+  /* TODO */
+  /* .project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: start;
+  } */
+
+  .project-facts {
+    display: flex;
+    margin-left: 0;
+    font-size: 1.5rem;
+    justify-content: start;
+
+    /* #eec  WATCH THIS*/
+    grid-row: auto;
+    grid-column: auto;
   }
 
   .project-country {
+    display: block;
     line-height: 1.3;
+    margin-top: 1.3rem;
+  }
+
+  .project-facts {
+    margin-top: 1.3rem;
   }
 
   .project-more__btn {
@@ -526,24 +567,12 @@ Insted we assume that 1rem = 1em = 16px */
     padding-right: 0;
   }
 
-  .project {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-header > div:nth-child(2) {
-    display: none;
-  }
-
   .project-thumbnail {
     width: 15rem;
   }
 
   .project-name {
-    margin-left: 1rem;
-  }
-
-  .project-country {
-    display: none;
+    margin-left: 2.5rem;
   }
 
   .project-more {

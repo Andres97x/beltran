@@ -25,6 +25,13 @@ const Projects: FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [curProject, setCurProject] = useState<DataInterface[] | []>([]);
 
+  // disable scrolling while project modal is open
+  if (modalOpen) {
+    document.documentElement.style.overflow = 'hidden';
+  } else {
+    document.documentElement.style.overflow = 'auto';
+  }
+
   const handleClick = (id: number) => {
     setProjects(prevProjects =>
       prevProjects.map(project =>
