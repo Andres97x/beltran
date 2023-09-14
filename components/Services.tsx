@@ -45,9 +45,13 @@ const servicesInfo = [
   },
 ];
 
-const Services: FC = () => {
+interface Props {
+  windowWidth: number;
+  setWindowWidth: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
   const [curSlide, setCurSlide] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const sliderRef = useRef<null | HTMLDivElement>(null);
   const swipe: any = useContext(SwipeContext);
 

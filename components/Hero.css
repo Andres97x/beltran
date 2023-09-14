@@ -8,14 +8,15 @@
   width: 100%;
   height: 100vh;
   height: 100svh;
-  /*TEMPORARY*/
+  /*IMPORTANT*/
 }
 
 .hero-wrapper {
   position: fixed;
+  width: 100%;
   height: 100vh;
   height: 100lvh;
-  width: 100%;
+  /*IMPORTANT*/
 }
 
 .hero {

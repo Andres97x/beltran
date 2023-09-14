@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import './App.css';
 
 import Header from '../components/Header';
@@ -11,8 +11,15 @@ import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 
 const App: FC = () => {
-  // Links smooth scrolling
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
+    // resize event
+    window.addEventListener('resize', () => {
+      setWindowWidth(window.innerWidth);
+    });
+
+    // Links smooth scrolling
     const navLinksContainer = document.querySelector('.header-nav__items');
 
     navLinksContainer?.addEventListener('click', e => {
@@ -109,7 +116,7 @@ const App: FC = () => {
       <div className='header-hero'>
         <Header />
         <div className='hero-wrapper'>
-          <Hero />
+          <Hero windowWidth={windowWidth} />
         </div>
       </div>
 
@@ -119,7 +126,7 @@ const App: FC = () => {
           h2='Get to know what we do'
           number='1'
         />
-        <Services />
+        <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
       </div>
 
       <div className='section'>

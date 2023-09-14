@@ -3,17 +3,28 @@ import './Hero.css';
 
 import { videosData } from '../videosData';
 
-const Hero: FC = () => {
+interface Props {
+  windowWidth: number;
+}
+
+const Hero: FC<Props> = ({ windowWidth }) => {
   const video = videosData[0].video;
   const heroRef = useRef<HTMLVideoElement | null>(null);
   const heroTextRef = useRef<HTMLDivElement | null>(null);
 
   let scrollYPos = window.scrollY;
+  let heroOpacityRate: number;
+
+  if (windowWidth <= 600) heroOpacityRate = 1.2;
+  else heroOpacityRate = 1.5;
+
+  console.log(heroOpacityRate);
+
   useEffect(() => {
     document.addEventListener('scroll', () => {
       scrollYPos = window.scrollY;
 
-      let heroOpacity = 1.5 - scrollYPos / 600;
+      let heroOpacity = heroOpacityRate - scrollYPos / 600;
       if (heroOpacity < 0) heroOpacity = 0;
       if (heroRef.current) heroRef.current.style.opacity = `${heroOpacity}`;
 
