@@ -63,6 +63,13 @@ const Services: FC = () => {
   }, [windowWidth, curSlide]);
 
   useEffect(() => {
+    if (curSlide !== 0) {
+      setCurSlide(0);
+    }
+    return;
+  }, [windowWidth]);
+
+  useEffect(() => {
     window.addEventListener('resize', () => {
       setWindowWidth(window.innerWidth);
     });
