@@ -6,12 +6,15 @@
 .header-hero {
   position: relative;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
+  height: 100svh;
+  /*TEMPORARY*/
 }
 
 .hero-wrapper {
   position: fixed;
-  height: 100%;
+  height: 100vh;
+  height: 100lvh;
   width: 100%;
 }
 
@@ -27,20 +30,14 @@
   position: absolute;
   bottom: 10%;
   left: 4%;
+  transition: all 0.2s;
 }
 
 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* opacity: 0; */
-  /* TODO */
 }
-
-/* Fix jump page makes when adding sticky to header */
-/* .hero.fix-jump {
-  padding-top: 11rem;
-} */
 
 .hero-logo__text {
   margin-top: 2.5rem;
@@ -48,28 +45,3 @@ video {
   font-size: 0.9rem;
   text-transform: uppercase;
 }
-
-/* .paragraph-text {
-  opacity: 0;
-  animation: from-below 0.5s ease-out calc(var(--delay) * 100ms),
-    fade-hero-para 0.7s linear calc(var(--delay) * 100ms),
-    reveal-text 0s linear calc(var(--delay) * 100ms) forwards;
-}
-
-@keyframes from-below {
-  from {
-    transform: translateY(110%);
-  }
-}
-
-@keyframes fade-hero-para {
-  from {
-    filter: blur(3px);
-  }
-}
-
-@keyframes reveal-text {
-  to {
-    opacity: 1;
-  }
-} */

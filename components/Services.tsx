@@ -1,4 +1,5 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { FC, useState, useEffect, useRef, useContext } from 'react';
+import { SwipeContext } from '../contexts/swipeContext.jsx';
 
 import image1Low from '../src/assets/services-1-low.jpg';
 import image2Low from '../src/assets/services-2-low.jpg';
@@ -48,6 +49,7 @@ const Services: FC = () => {
   const [curSlide, setCurSlide] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const sliderRef = useRef<null | HTMLDivElement>(null);
+  const swipe: any = useContext(SwipeContext);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -83,17 +85,16 @@ const Services: FC = () => {
     return { percentage, itemsPerScreen };
   }
 
-  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  function handleClick(direction: string) {
     if (sliderRef.current) {
       const itemsPerScreen = parseInt(
         getSliderInfo(sliderRef.current).itemsPerScreen
       );
 
       const slidesnum = servicesInfo.length / itemsPerScreen;
+      if (!direction) return;
 
-      const target = e.target as HTMLElement;
-      const button = target.closest('.services-btn');
-      if (button?.classList.contains('services-btn__right')) {
+      if (direction === 'next') {
         setCurSlide(prevSlide => {
           return curSlide === slidesnum - 1 ? 0 : prevSlide + 1;
         });
@@ -118,20 +119,38 @@ const Services: FC = () => {
   });
 
   return (
-    <div className='services'>
+    <div
+      className='services'
+      onTouchStart={swipe.onTouchStart}
+      onTouchMove={swipe.onTouchMove}
+      onTouchEnd={() => {
+        swipe.onTouchEnd(
+          () => {
+            handleClick('prev');
+          },
+          () => {
+            handleClick('next');
+          }
+        );
+      }}
+    >
       <div ref={sliderRef} className='services-slider'>
         {serviceCardEl}
       </div>
       <div className='services-btns'>
         <button
           className='services-btn services-btn__left'
-          onClick={handleClick}
+          onClick={() => {
+            handleClick('prev');
+          }}
         >
           <div>&lsaquo;</div>
         </button>
         <button
           className='services-btn services-btn__right'
-          onClick={handleClick}
+          onClick={() => {
+            handleClick('next');
+          }}
         >
           <div>&rsaquo;</div>
         </button>
