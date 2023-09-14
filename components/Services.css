@@ -1,17 +1,25 @@
 .services {
-  --service-gap: 3rem;
   margin: 0 auto;
   margin-top: 4rem;
   padding: 0 6rem;
+}
+
+.services-slider {
+  --service-gap: 3rem;
+  --items-per-screen: 4;
+  --slide-percentage: 0;
   display: flex;
   gap: var(--service-gap);
+  transition: transform 0.3s ease-in-out;
 }
 
 .service {
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 50rem;
+  width: calc((100% - (var(--service-gap) * 3)) / var(--items-per-screen));
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .service::after {
@@ -32,7 +40,7 @@
   overflow: hidden;
 }
 
-.service-img-container img {
+.service-img-container > img {
   width: 100%;
   height: 100%;
   transform: scale(1);
@@ -41,19 +49,6 @@
 
 .service-img-container img:hover {
   transform: scale(1.1);
-}
-
-.service-img-container > img {
-  width: 100%;
-  height: 100%;
-}
-
-.service-icon {
-  width: 8rem;
-  height: 8rem;
-  background-color: var(--bg-general);
-  padding: 1rem;
-  border-radius: 1000px;
 }
 
 .service-subheading {
@@ -77,4 +72,34 @@
   margin-top: 1rem;
   letter-spacing: 0.75px;
   line-height: 1.5;
+}
+
+.services-btns {
+  margin-left: 2rem;
+  display: flex;
+  gap: 4rem;
+  display: none;
+}
+
+.services-btn {
+  font-size: 4rem;
+  background-color: #aaa;
+  color: white;
+  border: none;
+  border-radius: 10000rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.services-btn:hover {
+  transform: scale(1.1);
+}
+
+.services-btn > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-7%);
 }

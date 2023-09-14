@@ -235,24 +235,21 @@ Insted we assume that 1rem = 1em = 16px */
     height: 2.9rem;
   }
 
-  .service-img {
+  .services-slider {
+    --items-per-screen: 2;
+    --slide-percentage: 90%;
+  }
+
+  .service {
+    margin-bottom: 6rem;
+  }
+
+  .services-btns {
     display: flex;
-    justify-content: start;
-    align-items: start;
   }
 
   .justify-helper {
     justify-content: center;
-  }
-
-  .service-content {
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
-
-  .service-img > img {
-    padding: 0;
-    width: 80%;
   }
 
   .project {
@@ -319,11 +316,6 @@ Insted we assume that 1rem = 1em = 16px */
     padding-top: 10rem;
   }
 
-  .section-projects {
-    padding-top: 10rem !important;
-    border-top: 1px solid rgba(190, 183, 164, 0.5);
-  }
-
   .sub-heading {
     font-weight: 600;
     margin-bottom: 1rem;
@@ -345,45 +337,8 @@ Insted we assume that 1rem = 1em = 16px */
     margin-top: 2rem;
   }
 
-  .service {
-    margin-bottom: 6rem;
-  }
-
-  .service-img {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-  }
-
-  .service-img::before,
-  .service-img::after {
-    content: '';
-    display: block;
-    position: absolute;
-    transform: translate(-50%, -50%) skewX(-3deg);
-  }
-
-  .service-img::before {
-    width: 60%;
-    padding-bottom: 60%;
-    background-color: rgba(190, 183, 164, 0.15);
-    z-index: -2;
-    top: 45%;
-    left: 45%;
-  }
-
-  .service-img::after {
-    width: 60%;
-    padding-bottom: 60%;
-    background-color: rgba(179, 162, 114, 0.15);
-    z-index: -1;
-    top: 55%;
-    left: 55%;
-  }
-
-  .service-img > img {
-    padding: 0;
-    width: 50%;
+  .services {
+    padding: 0 2rem;
   }
 
   .justify-helper {
@@ -510,8 +465,21 @@ Insted we assume that 1rem = 1em = 16px */
     font-size: 3.8rem;
   }
 
+  .section-projects {
+    border-top: 1px solid rgba(190, 183, 164, 0.5);
+  }
+
   .hero-text {
     width: 65%;
+  }
+
+  .services-slider {
+    --items-per-screen: 1;
+    --slide-percentage: 83%;
+  }
+
+  .services-btns {
+    margin-bottom: 4rem;
   }
 
   .modal-arrow {
