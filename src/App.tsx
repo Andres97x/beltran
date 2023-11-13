@@ -8,6 +8,7 @@ import Projects from '../components/Projects';
 import SectionInfo from '../components/SectionInfo';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
+import Map from '../components/Map';
 import Footer from '../components/Footer';
 
 const App: FC = () => {
@@ -159,6 +160,7 @@ const App: FC = () => {
         <Contact />
       </div> */}
       <Feature />
+      <Map />
       <Footer />
     </div>
   );

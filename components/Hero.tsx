@@ -15,8 +15,10 @@ const Hero: FC<Props> = ({ windowWidth }) => {
   let scrollYPos = window.scrollY;
   let heroOpacityRate: number;
 
-  if (windowWidth <= 600) heroOpacityRate = 1.2;
+  if (windowWidth <= 600) heroOpacityRate = 1;
   else heroOpacityRate = 1.5;
+
+  // lower hero opacity rate means that this element will fade quicker
 
   console.log(heroOpacityRate);
 

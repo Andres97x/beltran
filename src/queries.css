@@ -111,6 +111,10 @@ Insted we assume that 1rem = 1em = 16px */
   .dots__dot {
     margin-inline: 1.5rem;
   }
+
+  .map {
+    padding-bottom: 30%;
+  }
 }
 
 /* BELOW 1000PX (Portrait tablets) */
@@ -219,6 +223,10 @@ Insted we assume that 1rem = 1em = 16px */
     transform: rotate(-45deg);
     top: 50%;
   }
+
+  .map {
+    padding-bottom: 32%;
+  }
 }
 
 /* BELOW 920PX (Smaller tablets) */
@@ -270,6 +278,10 @@ Insted we assume that 1rem = 1em = 16px */
   .testimonial-text {
     width: 60%;
   }
+
+  .map {
+    padding-bottom: 35%;
+  }
 }
 
 /* BELOW 820px */
@@ -283,6 +295,10 @@ Insted we assume that 1rem = 1em = 16px */
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+  }
+
+  .map {
+    padding-bottom: 40%;
   }
 }
 
@@ -307,6 +323,10 @@ Insted we assume that 1rem = 1em = 16px */
   .testimonial-gallery,
   .testimonial-text {
     width: 80%;
+  }
+
+  .map {
+    padding-bottom: 50%;
   }
 }
 
@@ -457,6 +477,10 @@ Insted we assume that 1rem = 1em = 16px */
   .footer-container {
     grid-template-columns: 1fr 0.5fr 0.5fr;
   }
+
+  .map {
+    padding-bottom: 55%;
+  }
 }
 
 /* 520px smallest phones */
@@ -501,6 +525,10 @@ Insted we assume that 1rem = 1em = 16px */
 
   .testimonial-text span {
     font-size: 8rem;
+  }
+
+  .map {
+    padding-bottom: 70%;
   }
 }
 
@@ -556,4 +584,12 @@ Insted we assume that 1rem = 1em = 16px */
     justify-content: center;
     padding-top: 1rem;
   }
+
+  .map {
+    padding-bottom: 90%;
+  }
 }
+
+/* .map {
+  padding-bottom: 25%;
+} */
