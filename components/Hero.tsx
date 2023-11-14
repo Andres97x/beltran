@@ -40,9 +40,9 @@ const Hero: FC<Props> = ({ windowWidth }) => {
     <div className='hero'>
       <video ref={heroRef} src={video} autoPlay loop muted />
       <div ref={heroTextRef} className='hero-text'>
-        <span className='sub-heading__hero'>Project</span>
+        <span className='sub-heading__hero'>Proyecto</span>
         <h1 className='h1'>
-          High Line - Moynihan Connector Opens in New York City
+          Mercado público - Una nueva y enriquecedora experiencia
         </h1>
       </div>
     </div>

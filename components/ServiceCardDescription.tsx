@@ -5,8 +5,8 @@ interface Props {
 }
 
 const ServiceCardDescription: FC<Props> = ({ fullDescription }) => {
-  const fullDescriptionEl = fullDescription.map(description => (
-    <p>{description}</p>
+  const fullDescriptionEl = fullDescription.map((description, i) => (
+    <p key={i}>{description}</p>
   ));
 
   return (

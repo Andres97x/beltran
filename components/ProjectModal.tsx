@@ -7,14 +7,10 @@ interface DataInterface {
   isSelected: boolean;
   thumbnail: string;
   name: string;
-  country: string;
-  price: string;
-  rooms: string;
   location: string;
+  fastFacts: string[];
   photos: string[][];
-  text: {
-    description: string;
-  };
+  text: string[];
 }
 
 interface Props {

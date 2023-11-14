@@ -85,7 +85,12 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
   });
 
   const serviceCardDescriptionEl = servicesInfo.map(service => {
-    return <ServiceCardDescription fullDescription={service.fullDescription} />;
+    return (
+      <ServiceCardDescription
+        key={service.id}
+        fullDescription={service.fullDescription}
+      />
+    );
   });
 
   return (

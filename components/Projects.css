@@ -75,6 +75,7 @@
   width: 20rem;
   overflow: hidden;
   border-radius: 5px;
+  flex-shrink: 0;
 }
 
 .project-thumbnail > img {

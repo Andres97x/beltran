@@ -10,14 +10,10 @@ interface DataInterface {
   isSelected: boolean;
   thumbnail: string;
   name: string;
-  country: string;
-  price: string;
-  rooms: string;
   location: string;
+  fastFacts: string[];
   photos: string[][];
-  text: {
-    description: string;
-  };
+  text: string[];
 }
 
 const Projects: FC = () => {
@@ -69,10 +65,8 @@ const Projects: FC = () => {
       id={project.id}
       thumbnail={project.thumbnail}
       name={project.name}
-      country={project.country}
-      price={project.price}
-      rooms={project.rooms}
       location={project.location}
+      fastFacts={project.fastFacts}
       photos={project.photos}
       handleClick={handleClick}
       isSelected={project.isSelected}

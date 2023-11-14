@@ -25,7 +25,7 @@ const Header: FC = () => {
               className='nav-link'
               href='section-1'
             >
-              Services
+              Servicios
             </a>
           </li>
           <li className='header-nav__item'>
@@ -36,7 +36,7 @@ const Header: FC = () => {
               className='nav-link'
               href='section-2'
             >
-              Projects
+              Proyectos
             </a>
           </li>
           <li className='header-nav__item'>
@@ -47,7 +47,7 @@ const Header: FC = () => {
               className='nav-link'
               href='section-3'
             >
-              Testimonials
+              Marcas
             </a>
           </li>
           <li className='header-nav__item'>
@@ -58,7 +58,7 @@ const Header: FC = () => {
               className='nav-link'
               href='section-4'
             >
-              Contact
+              Contacto
             </a>
           </li>
         </ul>

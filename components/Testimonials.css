@@ -14,10 +14,12 @@
 
 .testimonial-text {
   width: 50%;
-  font-size: 4rem;
+  font-size: 2.5rem;
   display: flex;
   align-items: center;
   line-height: 1.2;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .testimonial-text p {
@@ -27,7 +29,7 @@
 .testimonial-text span {
   position: absolute;
   top: 0;
-  font-size: 15rem;
+  font-size: 8rem;
   transform: translate(-20%, -50%);
 }
 

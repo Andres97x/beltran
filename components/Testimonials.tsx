@@ -39,10 +39,22 @@ const Testimonials: FC = () => {
     <div className='testimonials'>
       <div className='testimonial-text'>
         <p>
-          <span>‟</span> Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Nostrum ipsum minus fuga voluptate, cumque ullam obcaecati
-          aspernatur ducimus consequatur nemo veritatis dolores praesentium
-          voluptatem voluptatibus ad impedit odit atque modi.”
+          <span>‟</span> Desde el año 2019, Beltrán Construction ha gestionado y
+          desarrollados proyectos de construcción en el sector público y
+          privado, desde proyectos residenciales, estaciones de bomberos,
+          parques, vías y canales. Adicionalmente hemos desarrollado
+          renovaciones y mantenimientos localizados.”
+        </p>
+        <p>
+          <span>‟</span> Somos una compañía de suministro, fabricación e
+          instalación de estructuras metálicas, nuestros proyectos son variados
+          en envergadura, trabajamos desde barandas, pérgolas hasta cubiertas y
+          edificios.”
+        </p>
+        <p>
+          <span>‟</span> Nos dedicamos principalmente al suministro e
+          instalación de puertas y ventanas en aluminio y PVC, contamos con un
+          equipo altamente calificado.”
         </p>
       </div>
       <div ref={testimonialRef} className='testimonial-gallery'>

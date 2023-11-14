@@ -1,6 +1,17 @@
 /* rem and em do NOT depend on html font size in media queries!
 Insted we assume that 1rem = 1em = 16px */
 
+/* 1800px */
+@media (max-width: 112.15em) {
+  .testimonial-text {
+    font-size: 2rem;
+  }
+
+  .testimonial-text span {
+    font-size: 6rem;
+  }
+}
+
 /* 1600px */
 @media (max-width: 100em) {
   .testimonials {
@@ -10,12 +21,8 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .testimonial-text {
-    font-size: 3rem;
+    font-size: 1.8rem;
     line-height: 1.5;
-  }
-
-  .testimonial-text span {
-    font-size: 10rem;
   }
 }
 
@@ -28,7 +35,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .projects-header > div:nth-child(2),
-  .project-country {
+  .project-location {
     text-align: center;
   }
 
@@ -68,7 +75,7 @@ Insted we assume that 1rem = 1em = 16px */
     grid-template-columns: 1.3fr 1fr 1fr;
   }
 
-  .project-country {
+  .project-location {
     transform: translateX(-5rem);
   }
 }
@@ -112,6 +119,10 @@ Insted we assume that 1rem = 1em = 16px */
     margin-inline: 1.5rem;
   }
 
+  .testimonial-text span {
+    font-size: 5rem;
+  }
+
   .map {
     padding-bottom: 30%;
   }
@@ -136,12 +147,12 @@ Insted we assume that 1rem = 1em = 16px */
     grid-template-columns: 1fr;
   }
 
-  .project-country {
+  .project-location {
     transform: translateX(0);
   }
 
   .projects-header > div:nth-child(2),
-  .project-country {
+  .project-location {
     text-align: end;
   }
 
@@ -275,6 +286,10 @@ Insted we assume that 1rem = 1em = 16px */
     width: 60%;
   }
 
+  .testimonial-text {
+    gap: 4rem;
+  }
+
   .map {
     padding-bottom: 35%;
   }
@@ -405,7 +420,7 @@ Insted we assume that 1rem = 1em = 16px */
     grid-column: auto;
   }
 
-  .project-country {
+  .project-location {
     display: block;
     line-height: 1.3;
     margin-top: 1.3rem;
@@ -516,11 +531,11 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .testimonial-text {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .testimonial-text span {
-    font-size: 8rem;
+    font-size: 4rem;
   }
 
   .map {

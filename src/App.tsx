@@ -123,8 +123,8 @@ const App: FC = () => {
 
       <div className='section'>
         <SectionInfo
-          subheading='services'
-          h2='Get to know what we do'
+          subheading='servicios'
+          h2='Conoce lo que hacemos'
           number='1'
         />
         <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
@@ -133,8 +133,8 @@ const App: FC = () => {
       <div className='section'>
         <SectionInfo
           classes={{ wide: 'section-projects' }}
-          subheading='projects'
-          h2='Check out our projects'
+          subheading='proyectos'
+          h2='Descubre lo que hemos logrado'
           number='2'
         />
         <Projects />
@@ -143,22 +143,14 @@ const App: FC = () => {
       <div className='section'>
         <div className='testimonials-container'>
           <SectionInfo
-            subheading='Testimonials'
-            h2='Here is what people say'
+            subheading='Nuestras marcas'
+            h2='Algo mas sobre nosotros'
             number='3'
             classes={{ color: 'dark', center: 'center' }}
           />
           <Testimonials />
         </div>
       </div>
-      {/* <div className='section'>
-        <SectionInfo
-          subheading='Contact'
-          h2='Get in touch with us'
-          number='4'
-        />
-        <Contact />
-      </div> */}
       <Feature />
       <Map />
       <Footer />
