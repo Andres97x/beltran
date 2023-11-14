@@ -8,10 +8,23 @@
   --service-gap: 3rem;
   --items-per-screen: 4;
   --slide-percentage: 0;
-  display: flex;
-  gap: var(--service-gap);
   transition: transform 0.3s ease-in-out;
 }
+
+.service-card {
+  display: flex;
+  gap: var(--service-gap);
+}
+
+.service-description {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+
+/* .service-card-description {
+  display: none;
+} */
 
 .service {
   display: flex;
@@ -76,6 +89,7 @@
 
 .services-btns {
   margin-left: 2rem;
+  margin-top: 2rem;
   display: flex;
   gap: 4rem;
   display: none;
@@ -102,4 +116,26 @@
   align-items: center;
   justify-content: center;
   transform: translateY(-7%);
+}
+
+.services-down-btn {
+  color: inherit;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.services-down-btn button {
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: 1px solid var(--color-text-title);
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.services-down-btn button:hover,
+.services-down-btn button:active {
+  color: var(--bg-general);
+  background-color: var(--color-text-title);
 }

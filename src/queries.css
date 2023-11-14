@@ -248,10 +248,6 @@ Insted we assume that 1rem = 1em = 16px */
     --slide-percentage: 90%;
   }
 
-  .service {
-    margin-bottom: 6rem;
-  }
-
   .services-btns {
     display: flex;
   }
@@ -489,9 +485,9 @@ Insted we assume that 1rem = 1em = 16px */
     font-size: 3.8rem;
   }
 
-  .section-projects {
+  /* .section-projects {
     border-top: 1px solid rgba(190, 183, 164, 0.5);
-  }
+  } */
 
   .hero-text {
     width: 65%;
@@ -534,9 +530,9 @@ Insted we assume that 1rem = 1em = 16px */
 
 /* 375px smallest phones */
 @media (max-width: 27.75em) {
-  .section-projects {
+  /* .section-projects {
     border-top: 1px solid rgba(190, 183, 164, 0.5);
-  }
+  } */
 
   .h2 {
     font-size: 3.2rem;

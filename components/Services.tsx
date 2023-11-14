@@ -1,49 +1,10 @@
 import { FC, useState, useEffect, useRef, useContext } from 'react';
 import { SwipeContext } from '../contexts/swipeContext.jsx';
-
-import image1Low from '../src/assets/services-1-low.jpg';
-import image2Low from '../src/assets/services-2-low.jpg';
-import image3Low from '../src/assets/services-3-low.jpg';
-import image4Low from '../src/assets/services-4-low.jpg';
-
-import image1 from '../src/assets/services-1.jpg';
-import image2 from '../src/assets/services-2.jpg';
-import image3 from '../src/assets/services-3.jpg';
-import image4 from '../src/assets/services-4.jpg';
+import servicesInfo from '../servicesData.ts';
 
 import ServiceCard from './ServiceCard';
+import ServiceCardDescription from './ServiceCardDescription.tsx';
 import './Services.css';
-
-const servicesInfo = [
-  {
-    id: 1,
-    image: image1,
-    imageLow: image1Low,
-    subheading: 'Remodelamos',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel est sed fuga non suscipit! Impedit.',
-  },
-  {
-    id: 2,
-    image: image2,
-    imageLow: image2Low,
-    subheading: 'Construimos',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel est sed fuga non suscipit! Impedit.',
-  },
-  {
-    id: 3,
-    image: image3,
-    imageLow: image3Low,
-    subheading: 'Pensamos',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel est sed fuga non suscipit! Impedit, aperiam itaque.',
-  },
-  {
-    id: 4,
-    image: image4,
-    imageLow: image4Low,
-    subheading: 'Diseñamos',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe vel est sed fuga.',
-  },
-];
 
 interface Props {
   windowWidth: number;
@@ -54,6 +15,7 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
   const [curSlide, setCurSlide] = useState(0);
   const sliderRef = useRef<null | HTMLDivElement>(null);
   const swipe: any = useContext(SwipeContext);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -122,6 +84,10 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
     );
   });
 
+  const serviceCardDescriptionEl = servicesInfo.map(service => {
+    return <ServiceCardDescription fullDescription={service.fullDescription} />;
+  });
+
   return (
     <div
       className='services'
@@ -139,8 +105,15 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
       }}
     >
       <div ref={sliderRef} className='services-slider'>
-        {serviceCardEl}
+        <div className='service-card'>{serviceCardEl}</div>
+        <div
+          className='service-card service-card-description'
+          style={{ display: isServicesOpen ? 'flex' : 'none' }}
+        >
+          {serviceCardDescriptionEl}
+        </div>
       </div>
+
       <div className='services-btns'>
         <button
           className='services-btn services-btn__left'
@@ -157,6 +130,16 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
           }}
         >
           <div>&rsaquo;</div>
+        </button>
+      </div>
+      <div className='services-down-btn'>
+        <button
+          onClick={() => {
+            setIsServicesOpen(prev => !prev);
+          }}
+        >
+          Ver {isServicesOpen ? 'menos' : 'mas'}{' '}
+          {isServicesOpen ? <span>&uarr;</span> : <span>&darr;</span>}
         </button>
       </div>
     </div>
