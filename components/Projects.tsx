@@ -79,9 +79,9 @@ const Projects: FC = () => {
     <>
       <div className='projects'>
         <div className='projects-header'>
-          <div>name</div>
-          <div>location</div>
-          <div>fast facts</div>
+          <div>nombre</div>
+          <div>ubicació n</div>
+          <div>servicios</div>
         </div>
         <div className='projects-container'>{projectsEl}</div>
       </div>

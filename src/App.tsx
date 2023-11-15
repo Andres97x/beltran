@@ -124,7 +124,7 @@ const App: FC = () => {
       <div className='section'>
         <SectionInfo
           subheading='servicios'
-          h2='Conoce lo que hacemos'
+          h2='Descubre nuestra experiencia'
           number='1'
         />
         <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
@@ -134,7 +134,7 @@ const App: FC = () => {
         <SectionInfo
           classes={{ wide: 'section-projects' }}
           subheading='proyectos'
-          h2='Descubre lo que hemos logrado'
+          h2='Explora nuestros logros'
           number='2'
         />
         <Projects />
@@ -144,7 +144,7 @@ const App: FC = () => {
         <div className='testimonials-container'>
           <SectionInfo
             subheading='Nuestras marcas'
-            h2='Algo mas sobre nosotros'
+            h2='Explora nuevas fronteras'
             number='3'
             classes={{ color: 'dark', center: 'center' }}
           />

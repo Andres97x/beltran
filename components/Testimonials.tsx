@@ -42,7 +42,7 @@ const Testimonials: FC = () => {
           <span>‟</span> Desde el año 2019, Beltrán Construction ha gestionado y
           desarrollados proyectos de construcción en el sector público y
           privado, desde proyectos residenciales, estaciones de bomberos,
-          parques, vías y canales. Adicionalmente hemos desarrollado
+          parques, vias y canales. Adicionalmente hemos desarrollado
           renovaciones y mantenimientos localizados.”
         </p>
         <p>

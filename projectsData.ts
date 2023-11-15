@@ -65,7 +65,7 @@ export default [
     thumbnail: project1Thumbnail,
     name: 'Bloques de Microbilogia',
     location: 'Ciénaga de Oro, Córdoba',
-    fastFacts: ['Arquitectura', 'diseño', 'Ingenieria estructural'],
+    fastFacts: ['Arquitectura y diseño', 'Ingenieria estructural'],
     photos: [
       [project1small1, project1full1],
       [project1small2, project1full2],
