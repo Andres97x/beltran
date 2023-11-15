@@ -179,7 +179,7 @@ export default [
     thumbnail: project5Thumbnail,
     name: 'PARQUE SOLAR FOTOVOLTAICO LA SIERPE',
     location: 'San Benito Abad, Sucre',
-    fastFacts: ['Ingeniería civil', 'Dirección de obras'],
+    fastFacts: ['Ingenieria civil', 'Dirección de obras'],
     photos: [
       [project5small1, project5full1],
       [project5small2, project5full2],
@@ -198,7 +198,7 @@ export default [
     thumbnail: project5Thumbnail,
     name: 'P.S. FOTOVOLTAICO TIERRA LINDA Y LA TOLUA',
     location: 'Chinú, Córdoba',
-    fastFacts: ['Ingeniería civil', 'Dirección de obras'],
+    fastFacts: ['Ingenieria civil', 'Dirección de obras'],
     photos: [
       [project5small1, project5full1],
       [project5small2, project5full2],

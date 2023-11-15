@@ -46,7 +46,7 @@ const Testimonials: FC = () => {
           renovaciones y mantenimientos localizados.”
         </p>
         <p>
-          <span>‟</span> Somos una compañía de suministro, fabricación e
+          <span>‟</span> Somos una compañia de suministro, fabricación e
           instalación de estructuras metálicas, nuestros proyectos son variados
           en envergadura, trabajamos desde barandas, pérgolas hasta cubiertas y
           edificios.”
