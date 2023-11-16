@@ -141,6 +141,12 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
         <button
           onClick={() => {
             setIsServicesOpen(prev => !prev);
+
+            isServicesOpen &&
+              sliderRef.current?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
           }}
         >
           Ver {isServicesOpen ? 'menos' : 'mas'}{' '}

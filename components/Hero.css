@@ -1,5 +1,5 @@
 .sub-heading__hero {
-  color: white;
+  color: var(--bg-general);
   font-size: 2rem;
 }
 

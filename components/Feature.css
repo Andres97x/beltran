@@ -8,6 +8,7 @@
 .feature-container {
   max-width: 100%;
   padding: 3.2rem 6rem;
+  padding-top: 7rem;
   margin: 0 auto;
 }
 
@@ -19,12 +20,14 @@
 
 .feature-logos {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
   margin-top: 3rem;
 }
 
 .feature-logos img {
-  height: 3.2rem;
-  filter: brightness(0) invert(0);
-  opacity: 50%;
+  height: 5.2rem;
+  /* filter: brightness(0) invert(0); */
+  /* opacity: 50%; */
 }

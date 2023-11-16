@@ -251,7 +251,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .feature-logos img {
-    height: 2.9rem;
+    height: 4rem;
   }
 
   .services-slider {
@@ -303,8 +303,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .feature-logos {
-    flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 3rem;
   }
 
@@ -328,7 +327,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .feature-logos img {
-    height: 2.5rem;
+    height: 3.2rem;
   }
 
   .testimonial-gallery,
@@ -538,6 +537,10 @@ Insted we assume that 1rem = 1em = 16px */
     font-size: 4rem;
   }
 
+  .feature-logos img {
+    height: 3rem;
+  }
+
   .map {
     padding-bottom: 70%;
   }
@@ -563,10 +566,6 @@ Insted we assume that 1rem = 1em = 16px */
 
   .feature-logos {
     margin-top: 2rem;
-  }
-
-  .feature-logos img {
-    height: 2rem;
   }
 
   .service-content {

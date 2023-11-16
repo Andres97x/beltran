@@ -22,7 +22,7 @@
 .social-icons {
   margin-top: 2rem;
   font-size: 3rem;
-  color: #b0b0b1;
+  color: var(--color-text-secundary);
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -34,7 +34,7 @@
 
 .copy {
   font-size: 1.4rem;
-  color: #767676;
+  color: var(--color-text-secundary);
   line-height: 1.6;
   margin-top: 2rem;
   width: 100%;

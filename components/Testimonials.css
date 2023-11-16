@@ -20,6 +20,7 @@
   line-height: 1.2;
   flex-direction: column;
   justify-content: space-around;
+  color: var(--color-text-secundary);
 }
 
 .testimonial-text p {

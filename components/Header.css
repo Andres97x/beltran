@@ -22,7 +22,7 @@
   animation: from-above 0.8s;
   /* background-color: transparent; */
   background-color: rgba(51, 51, 51, 0.58);
-  color: white;
+  color: var(--bg-general);
   transition: background-color 0.5s;
 }
 

@@ -26,7 +26,7 @@ const servicesInfo = [
     image: image2,
     imageLow: image2Low,
     subheading: 'Ingeniería estructural',
-    text: 'Nos especializamos en brindar servicios de ingeniería estructural de alta calidad, utilizando tecnologías innovadoras y enfoques vanguardistas',
+    text: 'Nos especializamos en brindar servicios de ingenieria estructural de alta calidad, utilizando tecnologias innovadoras y enfoques vanguardistas',
     fullDescription: [
       'Nuestro equipo de ingenieros altamente capacitados y experimentados trabaja en estrecha colaboración con arquitectos, contratistas y otros profesionales de la construcción para garantizar la seguridad, eficiencia y éxito de cada proyecto.',
       'Una de nuestras principales fortalezas es nuestra experiencia en el uso de la metodología BIM (Building Information Modeling). A través del uso de software avanzado y nuestras habilidades especializadas, creamos modelos 3D detallados y precisos de las estructuras que diseñamos. Este enfoque nos permite visualizar el proyecto en su totalidad, identificar y solucionar posibles problemas de diseño, y optimizar la coordinación entre los diferentes equipos involucrados en la construcción.',
@@ -38,7 +38,7 @@ const servicesInfo = [
     image: image3,
     imageLow: image3Low,
     subheading: 'Ingeniería civil',
-    text: 'Nos especializamos en brindar servicios de diseños y estudios en las áreas de vías y transporte, recursos hídricos, estructuras hidráulicos y ambientales con los mejores estándares calidad',
+    text: 'Nos especializamos en brindar servicios de diseños y estudios en las áreas de vias y transporte, recursos hidricos, estructuras hidráulicos y ambientales con los mejores estándares calidad',
     fullDescription: [
       'Nuestro equipo de expertos está comprometido en proporcionar soluciones integrales de infraestructura que incluyen, sistemas de drenajes, canales y diseño geométrico de vías en general.',
       'Nuestros servicios de estudios hidrológicos incluyen la evaluación de recursos hídricos, la modelización hidrológica y la planificación de la gestión del agua. Utilizamos tecnología de vanguardia y herramientas avanzadas para recopilar datos precisos y realizar análisis detallados que nos permiten entender y predecir el comportamiento de las aguas superficiales y subterráneas.',

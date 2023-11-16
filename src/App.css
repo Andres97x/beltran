@@ -1,9 +1,20 @@
-:root {
+/* :root {
   --bg-general: #f1f3f5;
   --bg-secondary: #212529;
-  --color-subheading: #fa5252;
   --color-text-title: #333;
   --color-text-general: #555;
+  --color-text-secundary: #aaa;
+  --color-cards: #243841;
+} */
+
+/* BELTRAN COLOR PALETTE */
+:root {
+  --bg-general: #f1f3f5;
+  --bg-secondary: #333333;
+  --color-text-title: #1d2a47;
+  --color-sub-title: #3f6cc3;
+  --color-text-general: #666666;
+  --color-text-secundary: #aaa;
   --color-cards: #243841;
 }
 
@@ -54,8 +65,9 @@ body {
   text-transform: uppercase;
   margin-bottom: 1.8rem;
   letter-spacing: 0.2px;
+  color: var(--color-sub-title);
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     #6f58c9 0%,
     #ae3ec9 33%,
@@ -64,11 +76,10 @@ body {
   );
   background-repeat: repeat-x;
   background-size: 50%;
-
   background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent; */
 }
 
 .sub-heading.center {
@@ -94,7 +105,7 @@ body {
 }
 
 .h2.dark {
-  color: #aaa;
+  color: var(--color-text-secundary);
 }
 
 .section {

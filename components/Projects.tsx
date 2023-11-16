@@ -1,9 +1,9 @@
 import { FC, useState, useEffect } from 'react';
 
 import Project from './Project';
+import ProjectModal from './ProjectModal';
 import projectsData from '../projectsData';
 import './Projects.css';
-import ProjectModal from './ProjectModal';
 
 interface DataInterface {
   id: number;

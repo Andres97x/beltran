@@ -3,6 +3,9 @@ import project2Thumbnail from './src/assets/project-2-thumbnail.jpg';
 import project3Thumbnail from './src/assets/project-3-thumbnail.jpg';
 import project4Thumbnail from './src/assets/project-4-thumbnail.jpg';
 import project5Thumbnail from './src/assets/project-5-thumbnail.jpg';
+import project6Thumbnail from './src/assets/project-6-thumbnail.jpg';
+import project7Thumbnail from './src/assets/project-7-thumbnail.jpg';
+import project8Thumbnail from './src/assets/project-8-thumbnail.jpg';
 
 import project1full1 from './src/assets/project-1-full1.jpg';
 import project1full2 from './src/assets/project-1-full2.jpg';
@@ -20,21 +23,25 @@ import project2full1 from './src/assets/project-2-full1.jpg';
 import project2full2 from './src/assets/project-2-full2.jpg';
 import project2full3 from './src/assets/project-2-full3.jpg';
 import project2full4 from './src/assets/project-2-full4.jpg';
+import project2full5 from './src/assets/project-2-full5.jpg';
 
 import project2small1 from './src/assets/project-2-small1.jpg';
 import project2small2 from './src/assets/project-2-small2.jpg';
 import project2small3 from './src/assets/project-2-small3.jpg';
 import project2small4 from './src/assets/project-2-small4.jpg';
+import project2small5 from './src/assets/project-2-small5.jpg';
 
 import project3full1 from './src/assets/project-3-full1.jpg';
 import project3full2 from './src/assets/project-3-full2.jpg';
 import project3full3 from './src/assets/project-3-full3.jpg';
 import project3full4 from './src/assets/project-3-full4.jpg';
+import project3full5 from './src/assets/project-3-full5.jpg';
 
 import project3small1 from './src/assets/project-3-small1.jpg';
 import project3small2 from './src/assets/project-3-small2.jpg';
 import project3small3 from './src/assets/project-3-small3.jpg';
 import project3small4 from './src/assets/project-3-small4.jpg';
+import project3small5 from './src/assets/project-3-small5.jpg';
 
 import project4full1 from './src/assets/project-4-full1.jpg';
 import project4full2 from './src/assets/project-4-full2.jpg';
@@ -52,11 +59,61 @@ import project5full1 from './src/assets/project-5-full1.jpg';
 import project5full2 from './src/assets/project-5-full2.jpg';
 import project5full3 from './src/assets/project-5-full3.jpg';
 import project5full4 from './src/assets/project-5-full4.jpg';
+import project5full5 from './src/assets/project-5-full5.jpg';
 
 import project5small1 from './src/assets/project-5-small1.jpg';
 import project5small2 from './src/assets/project-5-small2.jpg';
 import project5small3 from './src/assets/project-5-small3.jpg';
 import project5small4 from './src/assets/project-5-small4.jpg';
+import project5small5 from './src/assets/project-5-small5.jpg';
+
+import project6full1 from './src/assets/project-6-full1.jpg';
+import project6full2 from './src/assets/project-6-full2.jpg';
+import project6full3 from './src/assets/project-6-full3.jpg';
+import project6full4 from './src/assets/project-6-full4.jpg';
+import project6full5 from './src/assets/project-6-full5.jpg';
+
+import project6small1 from './src/assets/project-6-small1.jpg';
+import project6small2 from './src/assets/project-6-small2.jpg';
+import project6small3 from './src/assets/project-6-small3.jpg';
+import project6small4 from './src/assets/project-6-small4.jpg';
+import project6small5 from './src/assets/project-6-small5.jpg';
+
+import project7full1 from './src/assets/project-7-full1.jpg';
+import project7full2 from './src/assets/project-7-full2.jpg';
+import project7full3 from './src/assets/project-7-full3.jpg';
+import project7full4 from './src/assets/project-7-full4.jpg';
+import project7full5 from './src/assets/project-7-full5.jpg';
+import project7full6 from './src/assets/project-7-full6.jpg';
+
+import project7small1 from './src/assets/project-7-small1.jpg';
+import project7small2 from './src/assets/project-7-small2.jpg';
+import project7small3 from './src/assets/project-7-small3.jpg';
+import project7small4 from './src/assets/project-7-small4.jpg';
+import project7small5 from './src/assets/project-7-small5.jpg';
+import project7small6 from './src/assets/project-7-small6.jpg';
+
+import project8full1 from './src/assets/project-8-full1.jpg';
+import project8full2 from './src/assets/project-8-full2.jpg';
+import project8full3 from './src/assets/project-8-full3.jpg';
+import project8full4 from './src/assets/project-8-full4.jpg';
+import project8full5 from './src/assets/project-8-full5.jpg';
+import project8full6 from './src/assets/project-8-full6.jpg';
+import project8full7 from './src/assets/project-8-full7.jpg';
+import project8full8 from './src/assets/project-8-full8.jpg';
+import project8full9 from './src/assets/project-8-full9.jpg';
+import project8full10 from './src/assets/project-8-full10.jpg';
+
+import project8small1 from './src/assets/project-8-small1.jpg';
+import project8small2 from './src/assets/project-8-small2.jpg';
+import project8small3 from './src/assets/project-8-small3.jpg';
+import project8small4 from './src/assets/project-8-small4.jpg';
+import project8small5 from './src/assets/project-8-small5.jpg';
+import project8small6 from './src/assets/project-8-small6.jpg';
+import project8small7 from './src/assets/project-8-small7.jpg';
+import project8small8 from './src/assets/project-8-small8.jpg';
+import project8small9 from './src/assets/project-8-small9.jpg';
+import project8small10 from './src/assets/project-8-small10.jpg';
 
 export default [
   {
@@ -92,6 +149,7 @@ export default [
       [project2small2, project2full2],
       [project2small3, project2full3],
       [project2small4, project2full4],
+      [project2small5, project2full5],
     ],
     text: [
       'El proyecto de diseño estructural de un coliseo de combate ubicado en el municipio de Apartadó, Antioquia. Este coliseo cuenta con una superficie de 6000 metros cuadrados y destaca por su impresionante cubierta en estructura metálica, compuesta por perfiles tubulares de altura variable.',
@@ -111,6 +169,7 @@ export default [
       [project3small2, project3full2],
       [project3small3, project3full3],
       [project3small4, project3full4],
+      [project3small5, project3full5],
     ],
     text: [
       'Este impresionante coliseo cuenta con una superficie de 5000 metros cuadrados y se distingue por su cubierta en estructura metálica con perfiles tubulares.',
@@ -149,6 +208,7 @@ export default [
       [project5small2, project5full2],
       [project5small3, project5full3],
       [project5small4, project5full4],
+      [project5small5, project5full5],
     ],
     text: [
       'Es un edificio de cuatro plantas en un lote de 223 metros cuadrados, dedicado a uso residencial del piso dos al cuarto, mientras que el primer nivel se destinó a parqueaderos y locales comerciales.',
@@ -158,15 +218,16 @@ export default [
   {
     id: 6,
     isSelected: false,
-    thumbnail: project5Thumbnail,
+    thumbnail: project6Thumbnail,
     name: 'BODEGA MARKAL',
-    location: 'Montería, Córdoba',
+    location: 'Monteria, Córdoba',
     fastFacts: ['Ingenieria estructural'],
     photos: [
-      [project5small1, project5full1],
-      [project5small2, project5full2],
-      [project5small3, project5full3],
-      [project5small4, project5full4],
+      [project6small1, project6full1],
+      [project6small2, project6full2],
+      [project6small3, project6full3],
+      [project6small4, project6full4],
+      [project6small5, project6full5],
     ],
     text: [
       'El diseño estructural de una bodega de concreto reforzado de dos pisos en la ciudad de Montería. Esta bodega, que alberga una fábrica textil en el primer piso y un área de almacenamiento en el segundo nivel.',
@@ -176,15 +237,17 @@ export default [
   {
     id: 7,
     isSelected: false,
-    thumbnail: project5Thumbnail,
+    thumbnail: project7Thumbnail,
     name: 'PARQUE SOLAR FOTOVOLTAICO LA SIERPE',
     location: 'San Benito Abad, Sucre',
     fastFacts: ['Ingenieria civil', 'Dirección de obras'],
     photos: [
-      [project5small1, project5full1],
-      [project5small2, project5full2],
-      [project5small3, project5full3],
-      [project5small4, project5full4],
+      [project7small1, project7full1],
+      [project7small2, project7full2],
+      [project7small3, project7full3],
+      [project7small4, project7full4],
+      [project7small5, project7full5],
+      [project7small6, project7full6],
     ],
     text: [
       'El Diseño y construcción de la vía de acceso al Parque Solar Fotovoltaico La Sierpe, la vía tiene una longitud total de 830 m con sobreanchos en la abscisa k0+000 y en la abscisa k0+750. La vía se construyó para soportar tractocamiones hasta de 40 ton y está conformado por un terraplén en material seleccionado con espesores que varían desde los 0.6 m hasta 1.3 m.',
@@ -195,15 +258,21 @@ export default [
   {
     id: 8,
     isSelected: false,
-    thumbnail: project5Thumbnail,
+    thumbnail: project8Thumbnail,
     name: 'P.S. FOTOVOLTAICO TIERRA LINDA Y LA TOLUA',
     location: 'Chinú, Córdoba',
     fastFacts: ['Ingenieria civil', 'Dirección de obras'],
     photos: [
-      [project5small1, project5full1],
-      [project5small2, project5full2],
-      [project5small3, project5full3],
-      [project5small4, project5full4],
+      [project8small1, project8full1],
+      [project8small2, project8full2],
+      [project8small3, project8full3],
+      [project8small4, project8full4],
+      [project8small5, project8full5],
+      [project8small6, project8full6],
+      [project8small7, project8full7],
+      [project8small8, project8full8],
+      [project8small9, project8full9],
+      [project8small10, project8full10],
     ],
     text: [
       'El servicio de estudio hidrológico para la mitigación de la transferencia de erosión realizado en el parque solar fotovoltaico Tierra Linda ha sido fundamental para garantizar la eficiente gestión de las aguas de escorrentía en el área.',
