@@ -27,7 +27,14 @@ const Project: FC<Props> = ({
 }) => {
   const photosEl = photos.map((photo, i) => {
     if (i <= 3) {
-      return <img key={i} className='project-more__img' src={photo[0]} />;
+      return (
+        <img
+          key={i}
+          className='project-more__img'
+          src={photo[0]}
+          alt={photo[2]}
+        />
+      );
     }
   });
 
@@ -62,7 +69,7 @@ const Project: FC<Props> = ({
             <div className='project-more__images'>{photosEl}</div>
             <div className='project-more__btn-container'>
               <button onClick={openModal} className='project-more__btn'>
-                See images
+                Ver imágenes
               </button>
             </div>
           </div>

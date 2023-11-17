@@ -22,6 +22,7 @@ interface Props {
 const ProjectModal: FC<Props> = ({ closeModal, modalOpen, curProject }) => {
   const [projectObj] = curProject;
   const images = projectObj.photos.map(photo => photo[1]);
+  const imagesAlt = projectObj.photos.map(photo => photo[2]);
   const [curSlide, setCurSlide] = useState(0);
   const maxSlide = images.length - 1;
   const swipe: any = useContext(SwipeContext);
@@ -80,6 +81,7 @@ const ProjectModal: FC<Props> = ({ closeModal, modalOpen, curProject }) => {
         key={i}
         src={img}
         style={style}
+        alt={imagesAlt[i]}
       />
     );
   });
@@ -105,16 +107,16 @@ const ProjectModal: FC<Props> = ({ closeModal, modalOpen, curProject }) => {
         <div className='modal-images__container'>
           {imagesEl}
           <div className='dots'>{dots}</div>
+          <AiOutlineLeft
+            onClick={prevSlide}
+            className='modal-arrow modal-arrow__left'
+          />
+          <AiOutlineRight
+            onClick={nextSlide}
+            className='modal-arrow modal-arrow__right'
+          />
         </div>
       </div>
-      <AiOutlineLeft
-        onClick={prevSlide}
-        className='modal-arrow modal-arrow__left'
-      />
-      <AiOutlineRight
-        onClick={nextSlide}
-        className='modal-arrow modal-arrow__right'
-      />
 
       <div onClick={() => closeModal()} className='overlay'></div>
     </>

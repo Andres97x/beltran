@@ -1,5 +1,6 @@
 import { FC, useRef, useState } from 'react';
 import './Header.css';
+import beltranGroupLogo from '../src/assets/beltran-group.png';
 
 const Header: FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -14,7 +15,17 @@ const Header: FC = () => {
 
   return (
     <div ref={headerRef} className='header'>
-      <div className='header-text'>Beltran</div>
+      <img
+        src={beltranGroupLogo}
+        className='header-logo'
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+          });
+        }}
+      />
       <nav className={`header-nav ${navOpen ? 'header-open' : ''}`}>
         <ul className='header-nav__items'>
           <li className='header-nav__item'>

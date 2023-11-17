@@ -1,14 +1,13 @@
 import { useRef, useEffect, FC } from 'react';
 import './Hero.css';
 
-import { videosData } from '../videosData';
+import video from '../src/assets/video1.mp4';
 
 interface Props {
   windowWidth: number;
 }
 
 const Hero: FC<Props> = ({ windowWidth }) => {
-  const video = videosData[0].video;
   const heroRef = useRef<HTMLVideoElement | null>(null);
   const heroTextRef = useRef<HTMLDivElement | null>(null);
 
@@ -40,10 +39,7 @@ const Hero: FC<Props> = ({ windowWidth }) => {
     <div className='hero'>
       <video ref={heroRef} src={video} autoPlay loop muted />
       <div ref={heroTextRef} className='hero-text'>
-        <span className='sub-heading__hero'>Proyecto</span>
-        <h1 className='h1'>
-          Mercado público - Una nueva y enriquecedora experiencia
-        </h1>
+        <h1 className='h1'>¡Diseñando un mundo mejor!</h1>
       </div>
     </div>
   );

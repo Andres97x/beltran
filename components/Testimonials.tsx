@@ -2,6 +2,10 @@ import { FC, useRef, useEffect } from 'react';
 
 import './Testimonials.css';
 
+import beltranConstructionLogo from '../src/assets/beltran-construction.png';
+import steelcolLogo from '../src/assets/steelcol.png';
+import windoorsLogo from '../src/assets/windoors.png';
+
 import tg1 from '../src/assets/testimonial-g-1.jpg';
 import tg2 from '../src/assets/testimonial-g-2.jpg';
 import tg3 from '../src/assets/testimonial-g-3.jpg';
@@ -38,24 +42,34 @@ const Testimonials: FC = () => {
   return (
     <div className='testimonials'>
       <div className='testimonial-text'>
-        <p>
-          <span>‟</span> Desde el año 2019, Beltrán Construction ha gestionado y
-          desarrollados proyectos de construcción en el sector público y
-          privado, desde proyectos residenciales, estaciones de bomberos,
-          parques, vias y canales. Adicionalmente hemos desarrollado
-          renovaciones y mantenimientos localizados.”
-        </p>
-        <p>
-          <span>‟</span> Somos una compañia de suministro, fabricación e
-          instalación de estructuras metálicas, nuestros proyectos son variados
-          en envergadura, trabajamos desde barandas, pérgolas hasta cubiertas y
-          edificios.”
-        </p>
-        <p>
-          <span>‟</span> Nos dedicamos principalmente al suministro e
-          instalación de puertas y ventanas en aluminio y PVC, contamos con un
-          equipo altamente calificado.”
-        </p>
+        <div>
+          <img src={beltranConstructionLogo} className='testimonial-logo' />
+          <p>
+            Desde el año 2019, Beltrán Construction ha gestionado y
+            desarrollados proyectos de construcción en el sector público y
+            privado, desde proyectos residenciales, estaciones de bomberos,
+            parques, vias y canales. Adicionalmente hemos desarrollado
+            renovaciones y mantenimientos localizados.
+          </p>
+        </div>
+
+        <div>
+          <img src={steelcolLogo} className='testimonial-logo' />
+          <p>
+            Somos una compañia de suministro, fabricación e instalación de
+            estructuras metálicas, nuestros proyectos son variados en
+            envergadura, trabajamos desde barandas, pérgolas hasta cubiertas y
+            edificios.
+          </p>
+        </div>
+        <div>
+          <img src={windoorsLogo} className='testimonial-logo' />
+          <p>
+            Nos dedicamos principalmente al suministro e instalación de puertas
+            y ventanas en aluminio y PVC, contamos con un equipo altamente
+            calificado.
+          </p>
+        </div>
       </div>
       <div ref={testimonialRef} className='testimonial-gallery'>
         <img

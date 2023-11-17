@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import './Footer.css';
 import '../src/queries.css';
+import beltranAltLogo from '../src/assets/BeltranAlt.png';
 import {
   AiOutlineWhatsApp,
-  AiOutlineFacebook,
+  AiOutlineLinkedin,
   AiOutlineInstagram,
 } from 'react-icons/ai';
 
@@ -12,15 +13,41 @@ const Footer: FC = () => {
     <div className='footer' id='section-4'>
       <div className='footer-container'>
         <div className='socials-col'>
-          <div className='header-text'>BELTRAN</div>
+          <img
+            className='footer-logo'
+            src={beltranAltLogo}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth',
+              });
+            }}
+          />
           <div className='social-icons'>
-            <AiOutlineWhatsApp className='social-icon' />
-            <AiOutlineFacebook className='social-icon' />
-            <AiOutlineInstagram className='social-icon' />
+            <a href='http://wa.me/+573138061540' target='blank'>
+              <AiOutlineWhatsApp className='social-icon' />
+            </a>
+            <a
+              href='https://www.linkedin.com/company/beltran-engineering-group/about/?viewAsMember=true'
+              target='blank'
+            >
+              <AiOutlineLinkedin className='social-icon' />
+            </a>
+            <a
+              href='https://www.instagram.com/beltranengineeringgroup/?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr'
+              target='blank'
+            >
+              <AiOutlineInstagram className='social-icon' />
+            </a>
           </div>
 
           <div className='copy'>
-            Copyright © 2023 by Andres Guerra, Inc. All rights reserved.
+            website designed by{' '}
+            <a href='https://www.instagram.com/andresguerra.97/' target='blank'>
+              Andrés Guerra
+            </a>
+            . All rights reserved.
           </div>
         </div>
       </div>

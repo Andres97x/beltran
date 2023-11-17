@@ -80,6 +80,7 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
         imageLow={service.imageLow}
         subheading={service.subheading}
         text={service.text}
+        alt={service.alt}
       />
     );
   });

@@ -4,11 +4,7 @@ Insted we assume that 1rem = 1em = 16px */
 /* 1800px */
 @media (max-width: 112.15em) {
   .testimonial-text {
-    font-size: 2rem;
-  }
-
-  .testimonial-text span {
-    font-size: 6rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -21,7 +17,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .testimonial-text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.5;
   }
 }
@@ -88,7 +84,6 @@ Insted we assume that 1rem = 1em = 16px */
 
   .feature-container {
     max-width: 100%;
-    padding: 3.2rem 6rem;
   }
 
   /* project images overlay arrows */
@@ -108,19 +103,15 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .modal-arrow__left {
-    left: 8%;
+    left: 3%;
   }
 
   .modal-arrow__right {
-    right: 8%;
+    right: 3%;
   }
 
   .dots__dot {
     margin-inline: 1.5rem;
-  }
-
-  .testimonial-text span {
-    font-size: 5rem;
   }
 
   .map {
@@ -218,7 +209,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .header-icon.header-open {
-    transform: translateX(-17rem);
+    transform: translateX(-14rem);
   }
 
   .header-icon__line {
@@ -247,7 +238,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .header-icon.header-open {
-    transform: translateX(-20rem);
+    transform: translateX(-17rem);
   }
 
   .feature-logos img {
@@ -290,6 +281,11 @@ Insted we assume that 1rem = 1em = 16px */
     gap: 4rem;
   }
 
+  .feature-container {
+    padding: 3.2rem 4rem;
+    padding-top: 7rem;
+  }
+
   .map {
     padding-bottom: 35%;
   }
@@ -319,7 +315,7 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .header-icon.header-open {
-    transform: translateX(-21rem);
+    transform: translateX(-18rem);
   }
 
   .hero-text {
@@ -333,6 +329,11 @@ Insted we assume that 1rem = 1em = 16px */
   .testimonial-gallery,
   .testimonial-text {
     width: 80%;
+  }
+
+  .feature-container {
+    padding: 3.2rem 2rem;
+    padding-top: 7rem;
   }
 
   .map {
@@ -355,18 +356,6 @@ Insted we assume that 1rem = 1em = 16px */
     font-size: 3.6rem;
   }
 
-  .feature-container {
-    padding: 2rem 4rem;
-  }
-
-  .feature-title {
-    font-size: 1.1rem;
-  }
-
-  .feature-logos {
-    margin-top: 2rem;
-  }
-
   .services {
     padding: 0 2rem;
   }
@@ -383,6 +372,10 @@ Insted we assume that 1rem = 1em = 16px */
   .projects-header {
     font-size: 2.2rem;
     margin-bottom: 2rem;
+  }
+
+  .projects-header > div:nth-child(1) {
+    display: none;
   }
 
   .projects-header > div:nth-child(2) {
@@ -522,20 +515,16 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .modal-arrow__left {
-    left: 11%;
+    left: 5%;
   }
 
   .modal-arrow__right {
-    right: 11%;
+    right: 5%;
   }
 
-  .testimonial-text {
+  /* .testimonial-text {
     font-size: 1.8rem;
-  }
-
-  .testimonial-text span {
-    font-size: 4rem;
-  }
+  } */
 
   .feature-logos img {
     height: 3rem;
@@ -558,14 +547,7 @@ Insted we assume that 1rem = 1em = 16px */
 
   .feature-container {
     padding: 2rem 1rem;
-  }
-
-  .feature-title {
-    font-size: 1.1rem;
-  }
-
-  .feature-logos {
-    margin-top: 2rem;
+    padding-top: 7rem;
   }
 
   .service-content {

@@ -53,7 +53,7 @@ const App: FC = () => {
       if (window.scrollY > 300) {
         if (header) header.style.backgroundColor = 'rgba(51, 51, 51)';
       } else {
-        if (header) header.style.backgroundColor = 'rgba(51, 51, 51, 0.58)';
+        if (header) header.style.backgroundColor = 'rgba(51, 51, 51, 0.75)';
       }
     });
 

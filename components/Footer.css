@@ -9,10 +9,11 @@
   margin: 0 auto;
 }
 
-.footer-logo__text {
-  text-transform: uppercase;
-  font-size: 2.3rem;
-  font-weight: 900;
+.footer-logo {
+  height: 5rem;
+  cursor: pointer;
+  filter: brightness(0) invert(0);
+  opacity: 50%;
 }
 
 .socials-col {
@@ -28,6 +29,20 @@
   gap: 1.5rem;
 }
 
+.social-icons > a {
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.social-icons > a:visited {
+  color: var(--color-text-secundary);
+}
+
+.social-icons > a:hover,
+.social-icons > a:active {
+  color: var(--bg-secondary);
+}
+
 .social-icon {
   cursor: pointer;
 }
@@ -38,4 +53,14 @@
   line-height: 1.6;
   margin-top: 2rem;
   width: 100%;
+}
+
+.copy > a {
+  color: var(--color-text-secundary);
+}
+
+.copy > a:visited,
+.copy > a:active,
+.copy > a:hover {
+  color: var(--color-text-secundary);
 }

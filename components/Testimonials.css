@@ -14,7 +14,7 @@
 
 .testimonial-text {
   width: 50%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   line-height: 1.2;
@@ -23,15 +23,8 @@
   color: var(--color-text-secundary);
 }
 
-.testimonial-text p {
-  position: relative;
-}
-
-.testimonial-text span {
-  position: absolute;
-  top: 0;
-  font-size: 8rem;
-  transform: translate(-20%, -50%);
+.testimonial-logo {
+  height: 6rem;
 }
 
 /* GALLERY */

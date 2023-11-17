@@ -5,13 +5,19 @@ interface Props {
   text: string;
   image: string;
   imageLow: string;
+  alt: string;
 }
 
-const ServiceCard: FC<Props> = ({ subheading, text, image, imageLow }) => {
+const ServiceCard: FC<Props> = ({ subheading, text, image, imageLow, alt }) => {
   return (
     <div className='service'>
       <div className='service-img-container'>
-        <img className='lazy-img__blurred' src={imageLow} data-src={image} />
+        <img
+          className='lazy-img__blurred'
+          src={imageLow}
+          data-src={image}
+          alt={alt}
+        />
       </div>
       <div className='service-content'>
         <div className='service-subheading'>{subheading}</div>

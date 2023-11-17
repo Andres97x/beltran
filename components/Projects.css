@@ -165,7 +165,6 @@
   padding: 1.5rem;
   font-family: inherit;
   color: var(--bg-general);
-  text-transform: uppercase;
   background-color: var(--color-text-title);
   cursor: pointer;
   transition: all 0.5s;
@@ -267,11 +266,11 @@
 }
 
 .modal-arrow__left {
-  left: 2%;
+  left: -4%;
 }
 
 .modal-arrow__right {
-  right: 2%;
+  right: -4%;
 }
 
 .overlay {
