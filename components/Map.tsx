@@ -5,7 +5,7 @@ const Map: FC = () => {
   return (
     <div className='map'>
       <iframe
-        src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3943.156837497231!2d-75.858999!3d8.771310999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDYnMTYuNyJOIDc1wrA1MSczMi40Ilc!5e0!3m2!1sen!2sco!4v1700241254836!5m2!1sen!2sco'
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5238308827866!2d-74.0558753!3d4.6786178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9aed01464057%3A0xfbf0d1419ec27560!2sCra.%2019b%20%2392-80%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1727795396300!5m2!1ses-419!2sco'
         width='600'
         height='450'
         style={{ border: '0' }}

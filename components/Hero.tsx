@@ -37,7 +37,7 @@ const Hero: FC<Props> = ({ windowWidth }) => {
 
   return (
     <div className='hero'>
-      <video ref={heroRef} src={video} autoPlay loop muted />
+      <video ref={heroRef} src={video} playsInline autoPlay loop muted />
       <div ref={heroTextRef} className='hero-text'>
         <h1 className='h1'>¡Diseñando un mundo mejor!</h1>
       </div>
