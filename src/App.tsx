@@ -51,9 +51,11 @@ const App: FC = () => {
 
       // navbar transparency
       if (window.scrollY > 300) {
-        if (header) header.style.backgroundColor = 'rgba(51, 51, 51)';
+        // if (header) header.style.backgroundColor = 'rgba(51, 51, 51)';
+        if (header) header.classList.add('header-blurred');
       } else {
-        if (header) header.style.backgroundColor = 'rgba(51, 51, 51, 0.75)';
+        if (header) header.classList.remove('header-blurred');
+        // if (header) header.style.backgroundColor = 'rgba(51, 51, 51, 0.75)';
       }
     });
 
@@ -64,17 +66,17 @@ const App: FC = () => {
       entries: IntersectionObserverEntry[],
       observer: IntersectionObserver
     ) => {
-      const [entry] = entries;
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
 
-      if (!entry.isIntersecting) return;
-      entry.target.classList.remove('section-hidden');
-
-      observer.unobserve(entry.target);
+        observer.unobserve(entry.target);
+      });
     };
 
     const revealObserver = new IntersectionObserver(reveal, {
       root: null,
-      threshold: 0.05,
+      rootMargin: '50px',
     });
 
     sections.forEach(sec => {

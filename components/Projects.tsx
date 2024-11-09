@@ -3,20 +3,7 @@ import projectsData from '../projectsData';
 
 import './Projects.css';
 
-// interface DataInterface {
-//   id: number;
-//   isSelected: boolean;
-//   thumbnail: string;
-//   name: string;
-//   location: string;
-//   fastFacts: string[];
-//   photos: string[][];
-//   text: string[];
-// }
-
 const Projects: FC = () => {
-  console.log(projectsData);
-
   const projectsEl = projectsData.map(project => (
     <div key={project.id} className='project'>
       <img

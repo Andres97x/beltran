@@ -40,7 +40,7 @@ const Testimonials: FC = () => {
   return (
     <div className='testimonials'>
       <div className='testimonial-text'>
-        <div>
+        {/* <div>
           <p>
             Desde el año 2019, Beltrán Construction ha gestionado y
             desarrollados proyectos de construcción en el sector público y
@@ -48,7 +48,7 @@ const Testimonials: FC = () => {
             parques, vias y canales. Adicionalmente hemos desarrollado
             renovaciones y mantenimientos localizados.
           </p>
-        </div>
+        </div> */}
 
         <div>
           <img src={steelcolLogo} className='testimonial-logo' />
@@ -59,13 +59,14 @@ const Testimonials: FC = () => {
             edificios.
           </p>
         </div>
-        <div>
+
+        {/* <div>
           <p>
             Nos dedicamos principalmente al suministro e instalación de puertas
             y ventanas en aluminio y PVC, contamos con un equipo altamente
             calificado.
           </p>
-        </div>
+        </div> */}
       </div>
       <div ref={testimonialRef} className='testimonial-gallery'>
         <img
@@ -75,22 +76,22 @@ const Testimonials: FC = () => {
           style={{ '--order': 1 } as React.CSSProperties}
         />
         <img
-          src={tg2Low}
-          data-src={tg2}
-          className='testimonial-image testimonial-image2 testimonial-hidden lazy-img__blurred'
-          style={{ '--order': 2 } as React.CSSProperties}
-        />
-        <img
           src={tg3Low}
           data-src={tg3}
-          className='testimonial-image testimonial-image3 testimonial-hidden lazy-img__blurred'
+          className='testimonial-image testimonial-image2 testimonial-hidden lazy-img__blurred'
           style={{ '--order': 3 } as React.CSSProperties}
         />
         <img
           src={tg4Low}
           data-src={tg4}
-          className='testimonial-image testimonial-image4 testimonial-hidden lazy-img__blurred'
+          className='testimonial-image testimonial-image3 testimonial-hidden lazy-img__blurred'
           style={{ '--order': 4 } as React.CSSProperties}
+        />
+        <img
+          src={tg2Low}
+          data-src={tg2}
+          className='testimonial-image testimonial-image4 testimonial-hidden lazy-img__blurred'
+          style={{ '--order': 2 } as React.CSSProperties}
         />
       </div>
     </div>
