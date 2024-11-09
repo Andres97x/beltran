@@ -23,13 +23,13 @@
 .social-icons {
   margin-top: 2rem;
   font-size: 3rem;
-  color: var(--color-text-secundary);
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
 .social-icons > a {
+  color: var(--color-text-secundary);
   transition: all 0.5s;
   text-decoration: none;
 }
