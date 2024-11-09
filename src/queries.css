@@ -29,51 +29,10 @@ Insted we assume that 1rem = 1em = 16px */
     padding-top: 8rem;
     padding-bottom: 10rem;
   }
-
-  .projects-header > div:nth-child(2),
-  .project-location {
-    text-align: center;
-  }
-
-  .projects-header > div:nth-child(3),
-  .project-facts {
-    margin-left: auto;
-    justify-content: end;
-  }
-
-  .project-facts {
-    text-align: center;
-    text-transform: capitalize;
-  }
-
-  .project-more {
-    grid-template-columns: 1fr auto;
-  }
-
-  .project-more__img {
-    width: 30%;
-    margin-inline: 0.5rem;
-  }
-
-  .project-more__images {
-    display: none;
-  }
-
-  .project-more__btn-container {
-    justify-content: end;
-    margin-left: 1rem;
-  }
 }
 
-/* BELOW 1300px (Landscape Tablets / project name misalign) */
+/* BELOW 1300px (Landscape Tablets) */
 @media (max-width: 81.25em) {
-  .project {
-    grid-template-columns: 1.3fr 1fr 1fr;
-  }
-
-  .project-location {
-    transform: translateX(-5rem);
-  }
 }
 
 /* BELOW 1100px (Landscape Tablets) */
@@ -84,34 +43,6 @@ Insted we assume that 1rem = 1em = 16px */
 
   .feature-container {
     max-width: 100%;
-  }
-
-  /* project images overlay arrows */
-  .modal-arrow {
-    position: fixed;
-    top: 50%;
-    color: white;
-    font-size: 3.5rem;
-    cursor: pointer;
-    transform: translateY(-50%);
-    background-color: var(--color-text-general);
-    border-radius: 1000px;
-    width: 4.5rem;
-    height: 4.5rem;
-    padding: 5px;
-    opacity: 0.5;
-  }
-
-  .modal-arrow__left {
-    left: 3%;
-  }
-
-  .modal-arrow__right {
-    right: 3%;
-  }
-
-  .dots__dot {
-    margin-inline: 1.5rem;
   }
 
   .map {
@@ -125,44 +56,11 @@ Insted we assume that 1rem = 1em = 16px */
     font-size: 50%;
   }
 
-  .projects-header {
-    grid-template-columns: 1fr 1fr;
+  .projects-container {
+    row-gap: 1rem;
+    column-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .projects-header > div:nth-child(3) {
-    display: none;
-  }
-
-  .project {
-    grid-auto-rows: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .project-location {
-    transform: translateX(0);
-  }
-
-  .projects-header > div:nth-child(2),
-  .project-location {
-    text-align: end;
-  }
-
-  .project-name-image {
-    transform: translateX(0);
-  }
-
-  .project-facts {
-    grid-row: 2;
-    grid-column: 1 / -1;
-    margin-left: 0;
-    justify-content: start;
-    margin-top: 1.5rem;
-  }
-
-  /* MOBILE NAVIGATION */
-  /* .header {
-    position: relative;
-  } */
 
   .header-nav {
     /* --color-mobile-nav: #beb7a4; */
@@ -258,14 +156,6 @@ Insted we assume that 1rem = 1em = 16px */
     justify-content: center;
   }
 
-  .project {
-    grid-template-columns: 1fr 0.6fr;
-  }
-
-  .projects-header {
-    font-size: 2.5rem;
-  }
-
   .testimonials {
     flex-direction: column;
     align-items: center;
@@ -322,6 +212,14 @@ Insted we assume that 1rem = 1em = 16px */
     width: 60%;
   }
 
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project img {
+    aspect-ratio: 2/1;
+  }
+
   .feature-logos img {
     height: 3.2rem;
   }
@@ -364,100 +262,19 @@ Insted we assume that 1rem = 1em = 16px */
     grid-row: 3/4;
   }
 
-  .projects {
-    padding: 0 2rem;
-    margin-top: 4rem;
-  }
-
-  .projects-header {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .projects-header > div:nth-child(1) {
-    display: none;
-  }
-
-  .projects-header > div:nth-child(2) {
-    display: none;
-  }
-
-  .project {
-    grid-template-rows: auto auto auto auto;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr;
-    justify-items: start;
-  }
-
-  .more-container {
-    grid-row: -1;
-  }
-
-  /* TODO */
-  /* .project-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-    align-items: start;
-  } */
-
-  .project-facts {
-    display: flex;
-    margin-left: 0;
-    font-size: 1.5rem;
-    justify-content: start;
-
-    /* #eec  WATCH THIS*/
-    grid-row: auto;
-    grid-column: auto;
-  }
-
-  .project-location {
-    display: block;
-    line-height: 1.3;
-    margin-top: 1.3rem;
-  }
-
-  .project-facts {
-    margin-top: 1.3rem;
-  }
-
-  .project-more__btn {
-    padding: 1rem;
-    font-size: 1.3rem;
-  }
-
-  /* Better mobile experience */
-  .project {
-    opacity: 1 !important;
-  }
-
-  .project:hover::after {
-    width: 0% !important;
-  }
-
-  .project.project-active::after {
-    width: 100% !important;
-  }
-
-  .project:hover .project-thumbnail > img {
-    transform: scale(1.1);
-  }
-
-  .project-active .project-thumbnail > img {
-    transform: scale(1) !important;
-  }
-  /*end for better mobile experience*/
-
   .testimonials-container {
     margin-top: 6rem;
   }
 
   .testimonials {
-    padding: 0 2rem;
+    padding: 0 5rem;
     padding-top: 8rem;
     padding-bottom: 15rem;
     gap: 10rem;
+  }
+
+  .testimonial-text {
+    width: 100%;
   }
 
   .contact {
@@ -492,10 +309,6 @@ Insted we assume that 1rem = 1em = 16px */
     font-size: 3.8rem;
   }
 
-  /* .section-projects {
-    border-top: 1px solid rgba(190, 183, 164, 0.5);
-  } */
-
   .hero-text {
     width: 65%;
   }
@@ -509,22 +322,9 @@ Insted we assume that 1rem = 1em = 16px */
     margin-bottom: 4rem;
   }
 
-  .modal-arrow {
-    width: 3.5rem;
-    height: 3.5rem;
+  .projects {
+    padding: 0 4rem;
   }
-
-  .modal-arrow__left {
-    left: 5%;
-  }
-
-  .modal-arrow__right {
-    right: 5%;
-  }
-
-  /* .testimonial-text {
-    font-size: 1.8rem;
-  } */
 
   .feature-logos img {
     height: 3rem;
@@ -537,10 +337,6 @@ Insted we assume that 1rem = 1em = 16px */
 
 /* 375px smallest phones */
 @media (max-width: 27.75em) {
-  /* .section-projects {
-    border-top: 1px solid rgba(190, 183, 164, 0.5);
-  } */
-
   .h2 {
     font-size: 3.2rem;
   }
@@ -553,28 +349,6 @@ Insted we assume that 1rem = 1em = 16px */
   .service-content {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .project-thumbnail {
-    width: 15rem;
-  }
-
-  .project-name {
-    margin-left: 2.5rem;
-  }
-
-  .project-facts {
-    font-size: 1.3rem;
-    gap: 0.5rem;
-  }
-
-  .project-more {
-    grid-template-columns: 1fr;
-  }
-
-  .project-more__btn-container {
-    justify-content: center;
-    padding-top: 1rem;
   }
 
   .map {

@@ -35,7 +35,7 @@ const Footer: FC = () => {
               <AiOutlineLinkedin className='social-icon' />
             </a>
             <a
-              href='https://www.instagram.com/beltranengineeringgroup/?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr'
+              href='https://www.instagram.com/beltrangroup/profilecard/?igsh=MXd0Ym05MGttdzM0eQ%3D%3D'
               target='blank'
             >
               <AiOutlineInstagram className='social-icon' />

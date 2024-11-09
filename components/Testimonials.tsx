@@ -2,9 +2,7 @@ import { FC, useRef, useEffect } from 'react';
 
 import './Testimonials.css';
 
-import beltranConstructionLogo from '../src/assets/beltran-construction.png';
 import steelcolLogo from '../src/assets/steelcol.png';
-import windoorsLogo from '../src/assets/windoors.png';
 
 import tg1 from '../src/assets/testimonial-g-1.jpg';
 import tg2 from '../src/assets/testimonial-g-2.jpg';
@@ -43,7 +41,6 @@ const Testimonials: FC = () => {
     <div className='testimonials'>
       <div className='testimonial-text'>
         <div>
-          <img src={beltranConstructionLogo} className='testimonial-logo' />
           <p>
             Desde el año 2019, Beltrán Construction ha gestionado y
             desarrollados proyectos de construcción en el sector público y
@@ -63,7 +60,6 @@ const Testimonials: FC = () => {
           </p>
         </div>
         <div>
-          <img src={windoorsLogo} className='testimonial-logo' />
           <p>
             Nos dedicamos principalmente al suministro e instalación de puertas
             y ventanas en aluminio y PVC, contamos con un equipo altamente

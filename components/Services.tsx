@@ -3,7 +3,6 @@ import { SwipeContext } from '../contexts/swipeContext.jsx';
 import servicesInfo from '../servicesData.ts';
 
 import ServiceCard from './ServiceCard';
-import ServiceCardDescription from './ServiceCardDescription.tsx';
 import './Services.css';
 
 interface Props {
@@ -15,7 +14,6 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
   const [curSlide, setCurSlide] = useState(0);
   const sliderRef = useRef<null | HTMLDivElement>(null);
   const swipe: any = useContext(SwipeContext);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -85,15 +83,6 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
     );
   });
 
-  const serviceCardDescriptionEl = servicesInfo.map(service => {
-    return (
-      <ServiceCardDescription
-        key={service.id}
-        fullDescription={service.fullDescription}
-      />
-    );
-  });
-
   return (
     <div
       className='services'
@@ -112,12 +101,6 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
     >
       <div ref={sliderRef} className='services-slider'>
         <div className='service-card'>{serviceCardEl}</div>
-        <div
-          className='service-card service-card-description'
-          style={{ display: isServicesOpen ? 'flex' : 'none' }}
-        >
-          {serviceCardDescriptionEl}
-        </div>
       </div>
 
       <div className='services-btns'>
@@ -136,22 +119,6 @@ const Services: FC<Props> = ({ windowWidth, setWindowWidth }) => {
           }}
         >
           <div>&rsaquo;</div>
-        </button>
-      </div>
-      <div className='services-down-btn'>
-        <button
-          onClick={() => {
-            setIsServicesOpen(prev => !prev);
-
-            isServicesOpen &&
-              sliderRef.current?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-              });
-          }}
-        >
-          Ver {isServicesOpen ? 'menos' : 'mas'}{' '}
-          {isServicesOpen ? <span>&uarr;</span> : <span>&darr;</span>}
         </button>
       </div>
     </div>

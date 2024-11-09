@@ -132,7 +132,7 @@ const App: FC = () => {
 
       <div className='section'>
         <SectionInfo
-          classes={{ wide: 'section-projects' }}
+          classes={{ wide: 'section-projects', center: 'center' }}
           subheading='proyectos'
           h2='Explora nuestros logros'
           number='2'
