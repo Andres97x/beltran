@@ -1,50 +1,59 @@
+import image1 from './src/assets/project-1.jpg';
+import image2 from './src/assets/project-2.jpg';
+import image3 from './src/assets/project-3.jpg';
+import image4 from './src/assets/project-4.jpg';
+import image5 from './src/assets/project-5.jpg';
+import image6 from './src/assets/project-6.jpg';
+import image7 from './src/assets/project-7.jpg';
+import image8 from './src/assets/project-8.jpg';
+
 export default [
   {
     id: 1,
     name: 'Coliseo de Combate CARD Apartadó',
     location: '',
-    src: './src/assets/project-1.jpg',
+    imageSrc: image1,
   },
   {
     id: 2,
     name: 'Auditorio Universidad de Có rdoba',
     location: '',
-    src: './src/assets/project-2.jpg',
+    imageSrc: image2,
   },
   {
     id: 3,
     name: 'Muelle turistico de Arboletes',
     location: '',
-    src: './src/assets/project-3.jpg',
+    imageSrc: image3,
   },
   {
     id: 4,
     name: 'Edificio residencial Villalobos',
     location: '',
-    src: './src/assets/project-4.jpg',
+    imageSrc: image4,
   },
   {
     id: 5,
     name: 'Edificio comercial Sagre',
     location: '',
-    src: './src/assets/project-5.jpg',
+    imageSrc: image5,
   },
   {
     id: 6,
     name: 'Bloque de anatomia UDC',
     location: '',
-    src: './src/assets/project-6.jpg',
+    imageSrc: image6,
   },
   {
     id: 7,
     name: 'Bloque de microbiologia UDC',
     location: '',
-    src: './src/assets/project-7.jpg',
+    imageSrc: image7,
   },
   {
     id: 8,
     name: 'Centro del adulto mayor de Dabeiba',
     location: '',
-    src: './src/assets/project-8.jpg',
+    imageSrc: image8,
   },
 ];

@@ -7,7 +7,7 @@ const Projects: FC = () => {
   const projectsEl = projectsData.map(project => (
     <div key={project.id} className='project'>
       <img
-        src={project.src}
+        src={project.imageSrc}
         className={project.id === 4 ? 'object-pos-top' : ''}
       />
       <div className='project-content'>
