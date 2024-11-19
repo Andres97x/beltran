@@ -63,22 +63,18 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .header-nav {
-    /* --color-mobile-nav: #beb7a4; */
-    --color-mobile-nav: rgb(51, 51, 51);
-    box-shadow: 0 2px 15px 4px rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--color-mobile-nav);
+    background-color: rgba(33, 37, 41, 0.99);
     padding: 4rem;
-    padding-top: 12rem;
-    padding-right: 12rem;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: all 0.5s;
+    transition: all 150ms linear;
     height: 100dvh;
-    /* width: 100%; */
+    width: 100%;
+    z-index: 1000;
   }
 
   .header-nav.header-open {
@@ -87,31 +83,30 @@ Insted we assume that 1rem = 1em = 16px */
     pointer-events: all;
   }
 
-  /* TODO  SELECT HTML BASED ON INNER CONTAINER CONDITION */
-  /* html:has(.header-open) {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-  } */
-
   .header-nav__items {
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    height: 100%;
+    gap: 8rem;
   }
+
+  /* .header-icon header-open */
 
   .header-icon {
     display: block;
-    transition: all 0.2s ease-out 0.2s;
+    transition: all 120ms linear;
+    z-index: 1100;
   }
 
   .header-icon.header-open {
-    transform: translateX(-14rem);
+    transform: translateX(-2rem);
   }
 
   .header-icon__line {
-    transition: all 0.2s linear 0.4s;
+    transition: all 120ms linear;
   }
 
   .header-open .header-icon__line:nth-child(1) {
@@ -133,10 +128,6 @@ Insted we assume that 1rem = 1em = 16px */
 @media (max-width: 57.5em) {
   .header {
     padding: 0 3rem;
-  }
-
-  .header-icon.header-open {
-    transform: translateX(-17rem);
   }
 
   .feature-logos img {
@@ -164,14 +155,18 @@ Insted we assume that 1rem = 1em = 16px */
 
   .testimonial-text {
     width: 60%;
+    gap: 4rem;
   }
 
   .testimonial-gallery {
     width: 70%;
   }
 
-  .testimonial-text {
-    gap: 4rem;
+  .testimonial-image2 {
+    transform: translateY(-5rem);
+  }
+  .testimonial-image4 {
+    transform: translateY(-5rem);
   }
 
   .feature-container {
@@ -205,10 +200,6 @@ Insted we assume that 1rem = 1em = 16px */
 @media (max-width: 45em) {
   .header {
     padding: 0 2rem;
-  }
-
-  .header-icon.header-open {
-    transform: translateX(-18rem);
   }
 
   .hero-text {
@@ -335,6 +326,14 @@ Insted we assume that 1rem = 1em = 16px */
   .projects {
     padding: 0 4rem;
   }
+
+  
+  .testimonial-image2 {
+    transform: translateY(-2rem);
+  }
+  .testimonial-image4 {
+    transform: translateY(-2rem);
+  2
 
   .feature-logos img {
     height: 3rem;
