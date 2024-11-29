@@ -2,17 +2,17 @@ import { FC, useRef, useEffect } from 'react';
 
 import './Testimonials.css';
 
-import steelcolLogo from '../src/assets/steelcol.png';
+import steelcolLogo from '../src/assets/steelcol.webp';
 
-import tg1 from '../src/assets/testimonial-g-1.jpg';
-import tg2 from '../src/assets/testimonial-g-2.jpg';
-import tg3 from '../src/assets/testimonial-g-3.jpg';
-import tg4 from '../src/assets/testimonial-g-4.jpg';
+import tg1 from '../src/assets/testimonial-g-1.webp';
+import tg2 from '../src/assets/testimonial-g-2.webp';
+import tg3 from '../src/assets/testimonial-g-3.webp';
+import tg4 from '../src/assets/testimonial-g-4.webp';
 
-import tg1Low from '../src/assets/testimonial-g-1-low.jpg';
-import tg2Low from '../src/assets/testimonial-g-2-low.jpg';
-import tg3Low from '../src/assets/testimonial-g-3-low.jpg';
-import tg4Low from '../src/assets/testimonial-g-4-low.jpg';
+import tg1Low from '../src/assets/testimonial-g-1-low.webp';
+import tg2Low from '../src/assets/testimonial-g-2-low.webp';
+import tg3Low from '../src/assets/testimonial-g-3-low.webp';
+import tg4Low from '../src/assets/testimonial-g-4-low.webp';
 
 const Testimonials: FC = () => {
   const testimonialRef = useRef<HTMLDivElement>(null);

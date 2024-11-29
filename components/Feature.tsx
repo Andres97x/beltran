@@ -1,17 +1,17 @@
 import { FC } from 'react';
 import './Feature.css';
 
-import feature1 from '../src/assets/feature-1.png';
-import feature2 from '../src/assets/feature-2.png';
-import feature3 from '../src/assets/feature-3.png';
-import feature4 from '../src/assets/feature-4.png';
-import feature5 from '../src/assets/feature-5.png';
-import feature6 from '../src/assets/feature-6.png';
-import feature7 from '../src/assets/feature-7.png';
-import feature8 from '../src/assets/feature-8.png';
-import feature9 from '../src/assets/feature-9.png';
-import feature10 from '../src/assets/feature-10.png';
-import feature11 from '../src/assets/feature-11.png';
+import feature1 from '../src/assets/feature-1.webp';
+import feature2 from '../src/assets/feature-2.webp';
+import feature3 from '../src/assets/feature-3.webp';
+import feature4 from '../src/assets/feature-4.webp';
+import feature5 from '../src/assets/feature-5.webp';
+import feature6 from '../src/assets/feature-6.webp';
+import feature7 from '../src/assets/feature-7.webp';
+import feature8 from '../src/assets/feature-8.webp';
+import feature9 from '../src/assets/feature-9.webp';
+import feature10 from '../src/assets/feature-10.webp';
+import feature11 from '../src/assets/feature-11.webp';
 
 const Feature: FC = () => {
   return (

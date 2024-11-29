@@ -1,12 +1,12 @@
-import image1Low from './src/assets/services-1-low.jpg';
-import image2Low from './src/assets/services-2-low.jpg';
-import image3Low from './src/assets/services-3-low.jpg';
-import image4Low from './src/assets/services-4-low.jpg';
+import image1Low from './src/assets/services-1-low.webp';
+import image2Low from './src/assets/services-2-low.webp';
+import image3Low from './src/assets/services-3-low.webp';
+import image4Low from './src/assets/services-4-low.webp';
 
-import image1 from './src/assets/services-1.jpg';
-import image2 from './src/assets/services-2.jpg';
-import image3 from './src/assets/services-3.jpg';
-import image4 from './src/assets/services-4.jpg';
+import image1 from './src/assets/services-1.webp';
+import image2 from './src/assets/services-2.webp';
+import image3 from './src/assets/services-3.webp';
+import image4 from './src/assets/services-4.webp';
 
 const servicesInfo = [
   {

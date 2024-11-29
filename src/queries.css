@@ -218,6 +218,29 @@ Insted we assume that 1rem = 1em = 16px */
     height: 3.2rem;
   }
 
+  .project::after {
+    display: none;
+  }
+
+  .project-content {
+    position: absolute;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: unset;
+    padding: 1rem 2.2rem;
+    border-top: unset;
+    border-right: 2px solid var(--color-sub-title);
+    opacity: 1;
+  }
+
+  .project:hover .project-content {
+    opacity: 1;
+    top: unset;
+  }
+
   .testimonial-gallery {
     width: 80%;
   }
@@ -327,13 +350,12 @@ Insted we assume that 1rem = 1em = 16px */
     padding: 0 4rem;
   }
 
-  
   .testimonial-image2 {
     transform: translateY(-2rem);
   }
   .testimonial-image4 {
     transform: translateY(-2rem);
-  2
+  }
 
   .feature-logos img {
     height: 3rem;

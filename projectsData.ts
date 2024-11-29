@@ -1,38 +1,38 @@
-import image1 from './src/assets/project-1.jpg';
-import image2 from './src/assets/project-2.jpg';
-import image3 from './src/assets/project-3.jpg';
-import image4 from './src/assets/project-4.jpg';
-import image5 from './src/assets/project-5.jpg';
-import image6 from './src/assets/project-6.jpg';
-import image7 from './src/assets/project-7.jpg';
-import image8 from './src/assets/project-8.jpg';
-import image9 from './src/assets/project-9.jpg';
-import image10 from './src/assets/project-10.jpg';
-import image11 from './src/assets/project-11.jpg';
-import image12 from './src/assets/project-12.jpg';
-import image13 from './src/assets/project-13.jpg';
-import image14 from './src/assets/project-14.jpg';
-import image15 from './src/assets/project-15.jpg';
-import image16 from './src/assets/project-16.jpg';
-import image17 from './src/assets/project-17.jpg';
-import image18 from './src/assets/project-18.jpg';
-import image19 from './src/assets/project-19.jpg';
-import image20 from './src/assets/project-20.jpg';
-import image21 from './src/assets/project-21.jpg';
-import image22 from './src/assets/project-22.jpg';
-import image23 from './src/assets/project-23.jpg';
-import image24 from './src/assets/project-24.jpg';
+import image1 from './src/assets/project-1.webp';
+import image2 from './src/assets/project-2.webp';
+import image3 from './src/assets/project-3.webp';
+import image4 from './src/assets/project-4.webp';
+import image5 from './src/assets/project-5.webp';
+import image6 from './src/assets/project-6.webp';
+import image7 from './src/assets/project-7.webp';
+import image8 from './src/assets/project-8.webp';
+import image9 from './src/assets/project-9.webp';
+import image10 from './src/assets/project-10.webp';
+import image11 from './src/assets/project-11.webp';
+import image12 from './src/assets/project-12.webp';
+import image13 from './src/assets/project-13.webp';
+import image14 from './src/assets/project-14.webp';
+import image15 from './src/assets/project-15.webp';
+import image16 from './src/assets/project-16.webp';
+import image17 from './src/assets/project-17.webp';
+import image18 from './src/assets/project-18.webp';
+import image19 from './src/assets/project-19.webp';
+import image20 from './src/assets/project-20.webp';
+import image21 from './src/assets/project-21.webp';
+import image22 from './src/assets/project-22.webp';
+import image23 from './src/assets/project-23.webp';
+import image24 from './src/assets/project-24.webp';
 
 export default [
   {
     id: 1,
-    name: 'Coliseo de Combate CARD Apartadó',
+    name: 'Coliseo de Combate CARD Apartado',
     location: '',
     imageSrc: image1,
   },
   {
     id: 2,
-    name: 'Auditorio Universidad de Có rdoba',
+    name: 'Auditorio Universidad de Cordoba',
     location: '',
     imageSrc: image2,
   },
@@ -74,7 +74,7 @@ export default [
   },
   {
     id: 9,
-    name: 'Estación de Bomberos de Chinú',
+    name: 'Estacion de Bomberos de Chinu',
     location: '',
     imageSrc: image9,
   },
@@ -98,7 +98,7 @@ export default [
   },
   {
     id: 13,
-    name: 'Chancha de Futbol Chimá',
+    name: 'Chancha de Futbol Chima',
     location: '',
     imageSrc: image13,
   },
@@ -134,7 +134,7 @@ export default [
   },
   {
     id: 19,
-    name: 'Estructura para tanques elevados Cáceres',
+    name: 'Estructura para tanques elevados Caceres',
     location: '',
     imageSrc: image19,
   },
@@ -152,13 +152,13 @@ export default [
   },
   {
     id: 22,
-    name: 'Mercado Público Purisima',
+    name: 'Mercado Publico Purisima',
     location: '',
     imageSrc: image22,
   },
   {
     id: 23,
-    name: 'PSFV Tierra Linda Chinú',
+    name: 'PSFV Tierra Linda Chinu',
     location: '',
     imageSrc: image23,
   },
