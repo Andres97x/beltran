@@ -8,8 +8,11 @@ import Projects from '../components/Projects';
 import SectionInfo from '../components/SectionInfo';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
+import Contact from '../components/Contact';
 import Map from '../components/Map';
 import Footer from '../components/Footer';
+
+import { validateInput } from '../utils';
 
 const App: FC = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -112,6 +115,12 @@ const App: FC = () => {
     images.forEach(img => {
       observer.observe(img);
     });
+
+    // Validate numeric inputs
+    const numericInputs = document.querySelectorAll("[inputmode='numeric']");
+    numericInputs.forEach(input => {
+      if (input instanceof HTMLInputElement) validateInput(input);
+    });
   }, []);
 
   return (
@@ -153,6 +162,11 @@ const App: FC = () => {
           <Testimonials />
         </div>
       </div>
+
+      <div className='section'>
+        <Contact />
+      </div>
+
       <Feature />
       <Map />
       <Footer />

@@ -7,6 +7,10 @@
   --color-text-general: #666666;
   --color-text-secundary: #aaa;
   --color-cards: #243841;
+  --color-border: rgba(170, 170, 170, 0.5);
+  --box-shadow-strong: 0 7px 15px 0 rgba(0, 0, 0, 0.13),
+    0 1px 4px 0 rgba(0, 0, 0, 0.11);
+  --box-shadow-soft: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .no-scroll {
@@ -41,7 +45,6 @@ html {
 
 body {
   font-family: 'beto-book', sans-serif;
-  /* font-weight: 800; */
   line-height: 1;
   color: var(--color-text-general);
   background-color: var(--bg-general);
@@ -57,24 +60,17 @@ body {
   margin-bottom: 1.8rem;
   letter-spacing: 0.2px;
   color: var(--color-sub-title);
-
-  /* background: linear-gradient(
-    to right,
-    #6f58c9 0%,
-    #ae3ec9 33%,
-    #6f58c9 66%,
-    #ae3ec9 100%
-  );
-  background-repeat: repeat-x;
-  background-size: 50%;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; */
 }
 
 .sub-heading.center {
   background-size: 200%;
+}
+
+p,
+span {
+  font-size: 1.6rem;
+  letter-spacing: 0.75px;
+  line-height: 1.5;
 }
 
 .h1 {

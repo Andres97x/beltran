@@ -67,6 +67,7 @@
   font-weight: 500;
   padding-bottom: 2px;
   overflow: hidden;
+  padding-bottom: 0.6rem;
 }
 
 .nav-link:link,
@@ -85,7 +86,7 @@
   width: 100%;
   z-index: 1;
   transform: translate(-101%, 0px);
-  transition: all 0.5s;
+  transition: all 250ms linear;
 }
 
 .header-nav__item:hover.header-nav__item::before {

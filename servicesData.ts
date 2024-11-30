@@ -10,19 +10,6 @@ import image4 from './src/assets/services-4.webp';
 
 const servicesInfo = [
   {
-    id: 1,
-    image: image1,
-    alt: 'Render de un edificio moderno y personas caminando',
-    imageLow: image1Low,
-    subheading: 'Arquitectura & diseño',
-    text: 'Nos apasiona crear espacios arquitectónicos funcionales, estéticamente atractivos y respetuosos con el medio ambiente.',
-    fullDescription: [
-      'Nuestro equipo de arquitectos y diseñadores está comprometido en ofrecer soluciones innovadoras y sostenibles que se adapten a las necesidades y deseos de nuestros clientes.',
-      'Nuestros servicios de arquitectura abarcan desde el diseño conceptual hasta la supervisión de la construcción. Trabajamos en estrecha colaboración con nuestros clientes, escuchando atentamente sus ideas y requerimientos, para transformar sus sueños en realidad. Utilizamos herramientas de diseño avanzadas para crear visualizaciones 3D y planos detallados que permiten a nuestros clientes visualizar y comprender el proyecto antes de que se inicie la construcción.',
-      ' Además, nos especializamos en estudios bioclimáticos, lo que significa que diseñamos edificios teniendo en cuenta las caracteristicas climáticas y ambientales de su ubicación. Mediante el análisis de la orientación solar, la ventilación natural, el uso eficiente de la energia y otros aspectos, creamos espacios que maximizan la comodidad de los ocupantes y minimizan el impacto ambiental.',
-    ],
-  },
-  {
     id: 2,
     image: image2,
     alt: 'Imagen de la estructura de un coliseo',
@@ -46,6 +33,19 @@ const servicesInfo = [
       'Nuestro equipo de expertos está comprometido en proporcionar soluciones integrales de infraestructura que incluyen, sistemas de drenajes, canales y diseño geométrico de vias en general.',
       'Nuestros servicios de estudios hidrológicos incluyen la evaluación de recursos hidricos, la modelización hidrológica y la planificación de la gestión del agua. Utilizamos tecnologia de vanguardia y herramientas avanzadas para recopilar datos precisos y realizar análisis detallados que nos permiten entender y predecir el comportamiento de las aguas superficiales y subterráneas.',
       ' Por otro lado, nuestros estudios medioambientales se enfocan en evaluar el impacto ambiental de proyectos y actividades humanas. Realizamos análisis de calidad del agua, estudios de biodiversidad, evaluaciones de impacto ambiental, entre otros. Además, ofrecemos asesoramiento en la implementación de medidas de mitigación y restauración para garantizar un desarrollo sostenible y respetuoso con el entorno.',
+    ],
+  },
+  {
+    id: 1,
+    image: image1,
+    alt: 'Trabajador usando un taladro para obtener nucleo de concreto en el suelo',
+    imageLow: image1Low,
+    subheading: 'Reforzamiento estructural',
+    text: 'Realizamos el análisis de vulnerabilidad sísmica y reforzamiento estructural de todo tipo de edificaciones y estructuras.',
+    fullDescription: [
+      'Nuestro equipo de arquitectos y diseñadores está comprometido en ofrecer soluciones innovadoras y sostenibles que se adapten a las necesidades y deseos de nuestros clientes.',
+      'Nuestros servicios de arquitectura abarcan desde el diseño conceptual hasta la supervisión de la construcción. Trabajamos en estrecha colaboración con nuestros clientes, escuchando atentamente sus ideas y requerimientos, para transformar sus sueños en realidad. Utilizamos herramientas de diseño avanzadas para crear visualizaciones 3D y planos detallados que permiten a nuestros clientes visualizar y comprender el proyecto antes de que se inicie la construcción.',
+      ' Además, nos especializamos en estudios bioclimáticos, lo que significa que diseñamos edificios teniendo en cuenta las caracteristicas climáticas y ambientales de su ubicación. Mediante el análisis de la orientación solar, la ventilación natural, el uso eficiente de la energia y otros aspectos, creamos espacios que maximizan la comodidad de los ocupantes y minimizan el impacto ambiental.',
     ],
   },
   {

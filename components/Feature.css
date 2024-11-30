@@ -1,5 +1,6 @@
 .feature {
-  background-color: var(--bg-general);
+  /* background-color: var(--bg-general); */
+  background-color: #e6e6e6;
   color: #888;
   position: relative;
   z-index: 100;
@@ -7,8 +8,7 @@
 
 .feature-container {
   max-width: 100%;
-  padding: 3.2rem 6rem;
-  padding-top: 7rem;
+  padding: 6rem;
   margin: 0 auto;
 }
 
@@ -28,6 +28,4 @@
 
 .feature-logos img {
   height: 5.2rem;
-  /* filter: brightness(0) invert(0); */
-  /* opacity: 60%; */
 }

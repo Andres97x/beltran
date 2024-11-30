@@ -310,14 +310,6 @@ Insted we assume that 1rem = 1em = 16px */
     gap: 2.5rem;
   }
 
-  #first-name {
-    width: 100%;
-  }
-
-  #last-name {
-    width: 100%;
-  }
-
   .footer-container {
     grid-template-columns: 1fr 0.5fr 0.5fr;
   }
