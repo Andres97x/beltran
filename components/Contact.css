@@ -1,5 +1,5 @@
 .contact {
-  max-width: 130rem;
+  max-width: 140rem;
   margin: 0 auto;
   padding: 14rem 3.2rem 8rem 3.2rem;
   display: grid;
@@ -8,9 +8,9 @@
 }
 
 .contact-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 2.2rem;
+  display: grid;
+  height: fit-content;
+  row-gap: 2.2rem;
 }
 
 .contact-card {
@@ -20,6 +20,7 @@
   padding: 3rem;
   gap: 1.8rem;
   transition: all 250ms linear;
+  height: 100%;
 }
 
 .contact-card:hover {
@@ -54,7 +55,7 @@
   border: 1px solid var(--color-border);
   border-radius: 1rem;
   padding-inline: 4rem;
-  padding-block: 6rem;
+  padding-block: 5rem;
   transition: all 250ms linear;
 }
 
@@ -72,6 +73,11 @@
 .contact-form-heading .sub-heading {
   text-transform: unset;
   margin-bottom: 0.5rem;
+}
+
+.contact-form-heading h2 {
+  font-size: 3.5rem;
+  max-width: unset;
 }
 
 .contact-form-heading p {
@@ -113,6 +119,7 @@ label {
   font-weight: 600;
   display: block;
   margin-bottom: 0.8rem;
+  padding-left: 1rem;
 }
 
 label span {
@@ -128,18 +135,19 @@ textarea::placeholder {
 }
 
 .contact-form > button {
+  grid-column: span 2;
   background-color: var(--color-sub-title);
   color: white;
   cursor: pointer;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: max-content;
   margin: 0 auto;
-  transition: all 250ms linear;
-  grid-column: span 2;
   border: none;
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
   border-radius: 500px;
+  text-transform: uppercase;
+  transition: all 250ms linear;
 }
 
 input:focus,

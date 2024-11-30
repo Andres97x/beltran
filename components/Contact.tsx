@@ -111,6 +111,7 @@ const Contact: FC = () => {
           <div className='message-input-container'>
             <label htmlFor='mensaje'>Mensaje</label>
             <textarea
+              required
               name='mensaje'
               id='mensaje'
               placeholder='Escribe tu mensaje'

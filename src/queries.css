@@ -1,13 +1,6 @@
 /* rem and em do NOT depend on html font size in media queries!
 Insted we assume that 1rem = 1em = 16px */
 
-/* 1800px */
-@media (max-width: 112.15em) {
-  .testimonial-text {
-    font-size: 1.8rem;
-  }
-}
-
 /* 1600px */
 @media (max-width: 100em) {
   .testimonials {
@@ -16,9 +9,12 @@ Insted we assume that 1rem = 1em = 16px */
     padding-bottom: 10rem;
   }
 
-  .testimonial-text {
+  .testimonial-text p {
     font-size: 1.6rem;
-    line-height: 1.5;
+  }
+
+  .contact {
+    width: 90%;
   }
 }
 
@@ -31,14 +27,21 @@ Insted we assume that 1rem = 1em = 16px */
   }
 }
 
-/* BELOW 1300px (Landscape Tablets) */
-@media (max-width: 81.25em) {
-}
-
 /* BELOW 1100px (Landscape Tablets) */
 @media (max-width: 75em) {
   html {
     font-size: 56.25%;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    padding-bottom: 12rem;
+  }
+
+  .contact-cards {
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+    column-gap: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .feature-container {
@@ -214,6 +217,19 @@ Insted we assume that 1rem = 1em = 16px */
     aspect-ratio: 2/1;
   }
 
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .message-input-container {
+    grid-column: unset;
+  }
+
+  .contact-form > button {
+    grid-column: unset;
+  }
+
   .feature-logos img {
     height: 3.2rem;
   }
@@ -302,7 +318,11 @@ Insted we assume that 1rem = 1em = 16px */
   }
 
   .contact {
-    padding: 4rem 2rem 14rem 2rem;
+    width: 100%;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 3.2rem;
   }
 
   .name-container {
