@@ -222,11 +222,9 @@ Insted we assume that 1rem = 1em = 16px */
     gap: 3rem;
   }
 
-  .message-input-container {
-    grid-column: unset;
-  }
-
-  .contact-form > button {
+  .message-input-container,
+  .contact-form > button,
+  .contact-error {
     grid-column: unset;
   }
 
@@ -392,6 +390,14 @@ Insted we assume that 1rem = 1em = 16px */
   .service-content {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .contact-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-form-container {
+    padding-inline: 2rem;
   }
 
   .map {

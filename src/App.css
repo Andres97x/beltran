@@ -6,7 +6,7 @@
   --color-sub-title: #3f6cc3;
   --color-text-general: #666666;
   --color-text-secundary: #aaa;
-  --color-cards: #243841;
+  --color-error: #e03131;
   --color-border: rgba(170, 170, 170, 0.5);
   --box-shadow-strong: 0 7px 15px 0 rgba(0, 0, 0, 0.13),
     0 1px 4px 0 rgba(0, 0, 0, 0.11);
@@ -112,4 +112,9 @@ img[data-src] {
 
 img[data-src].lazy-img__blurred {
   filter: blur(10px);
+}
+
+.error-message {
+  color: var(--color-error);
+  font-weight: 600;
 }
