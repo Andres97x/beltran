@@ -1,9 +1,19 @@
 import { FC, useState, useRef } from 'react';
 import { IconType } from 'react-icons';
 import { HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
+import { TbHeartHandshake } from 'react-icons/tb';
 import { MdOutlineTimer } from 'react-icons/md';
 import { LuCheckCircle } from 'react-icons/lu';
+import FormModal from './FormModal';
+import useFormModalStore, { FormModalType } from '../src/store';
 import './contact.css';
+
+type ContactCardProps = {
+  Icon: IconType;
+  cardTitle: string;
+  firstTextSnippet: string;
+  secondTextSnippet: string;
+};
 
 const Contact: FC = () => {
   const [error, setError] = useState<string | null>(null);
@@ -12,6 +22,7 @@ const Contact: FC = () => {
   const nameRef = useRef<null | HTMLInputElement>(null);
   const emailRef = useRef<null | HTMLInputElement>(null);
   const messageRef = useRef<null | HTMLTextAreaElement>(null);
+  const { setType, open } = useFormModalStore(state => state.actions);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -61,6 +72,16 @@ const Contact: FC = () => {
     }
   }
 
+  function openClientForm() {
+    setType(FormModalType.CLIENT);
+    open();
+  }
+
+  function openProviderForm() {
+    setType(FormModalType.PROVIDER);
+    open();
+  }
+
   return (
     <div className='contact'>
       <div className='contact-cards'>
@@ -82,6 +103,21 @@ const Contact: FC = () => {
           firstTextSnippet='Abierto de lunes - sábado'
           secondTextSnippet='Horario de oficina: 8 AM - 6:00 PM'
         />
+        <div className='contact-card'>
+          <div className='contact-svg-container'>
+            <TbHeartHandshake />
+          </div>
+          <div>
+            <h6>Únetenos</h6>
+            <span>Convierte en cliente o proovedor</span>
+            <div className='forms-buttons-container'>
+              <button onClick={openClientForm}>Formulario de clientes</button>
+              <button onClick={openProviderForm}>
+                Formulario para proveedores
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       {status === 'idle' ? (
@@ -170,16 +206,11 @@ const Contact: FC = () => {
       ) : (
         <SubmittedView />
       )}
+
+      <FormModal />
     </div>
   );
 };
-
-interface ContactCardProps {
-  Icon: IconType;
-  cardTitle: string;
-  firstTextSnippet: string;
-  secondTextSnippet: string;
-}
 
 function ContactCard({
   Icon,
