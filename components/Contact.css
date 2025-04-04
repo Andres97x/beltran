@@ -61,7 +61,7 @@
   margin-top: 1.5rem;
 }
 
-.contact-card button {
+.contact-card button, .contact-card a {
   background-color: var(--color-sub-title);
   padding: 1rem 1.4rem;
   font-size: 1.6rem;
@@ -69,11 +69,22 @@
   color: #fff;
   cursor: pointer;
   transition: all 250ms linear;
+  text-align: center;
 }
 
 .contact-card button:hover,
-.contact-card button:focus {
+.contact-card button:focus,
+.contact-card a:hover,
+.contact-card a:focus {
   background-color: var(--color-text-title);
+}
+
+.contact-card a {
+  text-decoration: none;
+}
+
+.contact-card a:hover,.contact-card a:focus {
+  text-decoration: underline;
 }
 
 .contact-form-container {

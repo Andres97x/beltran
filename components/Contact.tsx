@@ -4,8 +4,6 @@ import { HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
 import { TbHeartHandshake } from 'react-icons/tb';
 import { MdOutlineTimer } from 'react-icons/md';
 import { LuCheckCircle } from 'react-icons/lu';
-import FormModal from './FormModal';
-import useFormModalStore, { FormModalType } from '../src/store';
 import './contact.css';
 
 type ContactCardProps = {
@@ -22,7 +20,6 @@ const Contact: FC = () => {
   const nameRef = useRef<null | HTMLInputElement>(null);
   const emailRef = useRef<null | HTMLInputElement>(null);
   const messageRef = useRef<null | HTMLTextAreaElement>(null);
-  const { setType, open } = useFormModalStore(state => state.actions);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -47,7 +44,7 @@ const Contact: FC = () => {
     // send
     const formElement = event.target as HTMLFormElement;
     const formData = new FormData(formElement);
-    formData.append('access_key', 'c9c7b58b-d058-47b5-adc4-6997a7f3581a');
+    formData.append('access_key', '2ba5fb14-e5df-46d3-ae14-33734c467a63');
 
     setIsSubmitting(true);
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -72,23 +69,13 @@ const Contact: FC = () => {
     }
   }
 
-  function openClientForm() {
-    setType(FormModalType.CLIENT);
-    open();
-  }
-
-  function openProviderForm() {
-    setType(FormModalType.PROVIDER);
-    open();
-  }
-
   return (
     <div className='contact'>
       <div className='contact-cards'>
         <ContactCard
           Icon={HiOutlinePhone}
           cardTitle='Contacto'
-          firstTextSnippet='3108061540'
+          firstTextSnippet='3108061540/(601)7225790'
           secondTextSnippet='contacto@beltran-group.com'
         />
         <ContactCard
@@ -111,10 +98,10 @@ const Contact: FC = () => {
             <h6>Únetenos</h6>
             <span>Convierte en cliente o proovedor</span>
             <div className='forms-buttons-container'>
-              <button onClick={openClientForm}>Formulario de clientes</button>
-              <button onClick={openProviderForm}>
+              <a href='https://docs.google.com/forms/d/e/1FAIpQLSdc8zOkQxZpqSx9ZDQMpwiv-xiVIJmyLlrxnViIWQ8s4vQGAA/viewform' target='_blank'>Formulario de clientes</a>
+              <a href='https://docs.google.com/forms/d/e/1FAIpQLSeDQcuZ7gRDuH4yhxpOE4VsMCbfrEhnry71SmsxvyBi9BZ6YQ/viewform' target='_blank'>
                 Formulario para proveedores
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -206,8 +193,6 @@ const Contact: FC = () => {
       ) : (
         <SubmittedView />
       )}
-
-      <FormModal />
     </div>
   );
 };
