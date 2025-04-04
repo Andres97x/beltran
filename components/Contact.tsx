@@ -1,9 +1,17 @@
 import { FC, useState, useRef } from 'react';
 import { IconType } from 'react-icons';
 import { HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
+import { TbHeartHandshake } from 'react-icons/tb';
 import { MdOutlineTimer } from 'react-icons/md';
 import { LuCheckCircle } from 'react-icons/lu';
 import './contact.css';
+
+type ContactCardProps = {
+  Icon: IconType;
+  cardTitle: string;
+  firstTextSnippet: string;
+  secondTextSnippet: string;
+};
 
 const Contact: FC = () => {
   const [error, setError] = useState<string | null>(null);
@@ -36,7 +44,7 @@ const Contact: FC = () => {
     // send
     const formElement = event.target as HTMLFormElement;
     const formData = new FormData(formElement);
-    formData.append('access_key', 'c9c7b58b-d058-47b5-adc4-6997a7f3581a');
+    formData.append('access_key', '2ba5fb14-e5df-46d3-ae14-33734c467a63');
 
     setIsSubmitting(true);
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -67,7 +75,7 @@ const Contact: FC = () => {
         <ContactCard
           Icon={HiOutlinePhone}
           cardTitle='Contacto'
-          firstTextSnippet='3108061540'
+          firstTextSnippet='3108061540/(601)7225790'
           secondTextSnippet='contacto@beltran-group.com'
         />
         <ContactCard
@@ -82,6 +90,21 @@ const Contact: FC = () => {
           firstTextSnippet='Abierto de lunes - sábado'
           secondTextSnippet='Horario de oficina: 8 AM - 6:00 PM'
         />
+        <div className='contact-card'>
+          <div className='contact-svg-container'>
+            <TbHeartHandshake />
+          </div>
+          <div>
+            <h6>Únetenos</h6>
+            <span>Convierte en cliente o proovedor</span>
+            <div className='forms-buttons-container'>
+              <a href='https://docs.google.com/forms/d/e/1FAIpQLSdc8zOkQxZpqSx9ZDQMpwiv-xiVIJmyLlrxnViIWQ8s4vQGAA/viewform' target='_blank'>Formulario de clientes</a>
+              <a href='https://docs.google.com/forms/d/e/1FAIpQLSeDQcuZ7gRDuH4yhxpOE4VsMCbfrEhnry71SmsxvyBi9BZ6YQ/viewform' target='_blank'>
+                Formulario para proveedores
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       {status === 'idle' ? (
@@ -173,13 +196,6 @@ const Contact: FC = () => {
     </div>
   );
 };
-
-interface ContactCardProps {
-  Icon: IconType;
-  cardTitle: string;
-  firstTextSnippet: string;
-  secondTextSnippet: string;
-}
 
 function ContactCard({
   Icon,

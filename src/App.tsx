@@ -43,7 +43,7 @@ const App: FC = () => {
     let lastScrollTop = 0;
     const header: HTMLDivElement | null = document.querySelector('.header');
     window.addEventListener('scroll', () => {
-      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollTop > lastScrollTop) {
         if (header) header.style.top = '-8rem';
