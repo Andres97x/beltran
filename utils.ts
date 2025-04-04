@@ -12,7 +12,7 @@ export function validateInput(el: HTMLInputElement) {
   });
 
   // Additional prevention of non-numeric characters
-  el.addEventListener('input', function (e) {
+  el.addEventListener('input', function () {
     // Remove any non-numeric characters
     this.value = this.value.replace(/[^\d]/g, '');
   });
