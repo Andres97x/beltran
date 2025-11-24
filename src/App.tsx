@@ -1,176 +1,91 @@
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Feature from '../components/Feature';
 import Projects from '../components/Projects';
+import ProjectsPage from '../components/ProjectsPage';
 import SectionInfo from '../components/SectionInfo';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Map from '../components/Map';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
-import { validateInput } from '../utils';
+import useWindowWidth from './hooks/useWindowWidth';
+import useSmoothScroll from './hooks/useSmoothScroll';
+import useNavbarVisibility from './hooks/useNavbarVisibility';
+import useSectionReveal from './hooks/useSectionReveal';
+import useLazyImages from './hooks/useLazyImages';
+import useNumericInputValidation from './hooks/useNumericInputValidation';
+import useScrollToTop from './hooks/useScrollToTop';
 
 const App: FC = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    // resize event
-    window.addEventListener('resize', () => {
-      setWindowWidth(window.innerWidth);
-    });
-
-    // Links smooth scrolling
-    const navLinksContainer = document.querySelector('.header-nav__items');
-
-    navLinksContainer?.addEventListener('click', e => {
-      e.preventDefault();
-      const target = e.target as Element;
-      if (!target.classList.contains('nav-link')) return;
-      const id = target.getAttribute('href');
-      console.log(id);
-
-      if (id)
-        document
-          .getElementById(id)
-          ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-
-    // show/hide navbar
-    let lastScrollTop = 0;
-    const header: HTMLDivElement | null = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        if (header) header.style.top = '-8rem';
-      } else {
-        if (header) header.style.top = '0';
-      }
-      lastScrollTop = scrollTop;
-
-      // navbar transparency
-      if (window.scrollY > 300) {
-        // if (header) header.style.backgroundColor = 'rgba(51, 51, 51)';
-        if (header) header.classList.add('header-blurred');
-      } else {
-        if (header) header.classList.remove('header-blurred');
-        // if (header) header.style.backgroundColor = 'rgba(51, 51, 51, 0.75)';
-      }
-    });
-
-    // revealing sections
-    const sections = document.querySelectorAll('.section');
-
-    const reveal = (
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver
-    ) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.remove('section-hidden');
-
-        observer.unobserve(entry.target);
-      });
-    };
-
-    const revealObserver = new IntersectionObserver(reveal, {
-      root: null,
-      rootMargin: '50px',
-    });
-
-    sections.forEach(sec => {
-      sec.classList.add('section-hidden');
-      revealObserver.observe(sec);
-    });
-
-    // lazy-loading images
-    const images = document.querySelectorAll('img[data-src]');
-
-    const options = {
-      root: null,
-      threshold: 0,
-      // rootMargin: '-200px',
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        const target = entry.target as HTMLImageElement;
-
-        if (!entry.isIntersecting) return;
-        // replace src with data-src
-        if (target.dataset.src) target.src = target.dataset.src;
-
-        target.addEventListener('load', () => {
-          target.classList.remove('lazy-img__blurred');
-        });
-
-        observer.unobserve(target);
-      });
-    }, options);
-
-    images.forEach(img => {
-      observer.observe(img);
-    });
-
-    // Validate numeric inputs
-    const numericInputs = document.querySelectorAll("[inputmode='numeric']");
-    numericInputs.forEach(input => {
-      if (input instanceof HTMLInputElement) validateInput(input);
-    });
-  }, []);
+  const [windowWidth, setWindowWidth] = useWindowWidth();
+  useSmoothScroll();
+  useNavbarVisibility();
+  useSectionReveal();
+  useLazyImages();
+  useNumericInputValidation();
+  useScrollToTop();
 
   return (
-    <div className='app-container'>
-      <div className='header-hero'>
-        <Header />
-        <div className='hero-wrapper'>
-          <Hero windowWidth={windowWidth} />
-        </div>
-      </div>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route
+          index
+          element={
+            <div className='app-container'>
+              <div className='header-hero'>
+                <div className='hero-wrapper'>
+                  <Hero windowWidth={windowWidth} />
+                </div>
+              </div>
 
-      <div className='section'>
-        <SectionInfo
-          subheading='servicios'
-          h2='Descubre nuestra experiencia'
-          number='1'
+              <div className='section'>
+                <SectionInfo
+                  subheading='servicios'
+                  h2='Descubre nuestra experiencia'
+                  number='1'
+                />
+                <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
+              </div>
+
+              <div className='section'>
+                <SectionInfo
+                  classes={{ wide: 'section-projects', center: 'center' }}
+                  subheading='proyectos'
+                  h2='Explora nuestros logros'
+                  number='2'
+                />
+                <Projects />
+              </div>
+
+              <div className='section'>
+                <div className='testimonials-container'>
+                  <SectionInfo
+                    subheading='Nuestras marcas'
+                    h2='Explora nuevas fronteras'
+                    number='3'
+                    classes={{ color: 'dark', center: 'center' }}
+                  />
+                  <Testimonials />
+                </div>
+              </div>
+
+              <div className='section'>
+                <Contact />
+              </div>
+
+              <Feature />
+              <Map />
+            </div>
+          }
         />
-        <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
-      </div>
-
-      <div className='section'>
-        <SectionInfo
-          classes={{ wide: 'section-projects', center: 'center' }}
-          subheading='proyectos'
-          h2='Explora nuestros logros'
-          number='2'
-        />
-        <Projects />
-      </div>
-
-      <div className='section'>
-        <div className='testimonials-container'>
-          <SectionInfo
-            subheading='Nuestras marcas'
-            h2='Explora nuevas fronteras'
-            number='3'
-            classes={{ color: 'dark', center: 'center' }}
-          />
-          <Testimonials />
-        </div>
-      </div>
-
-      <div className='section'>
-        <Contact />
-      </div>
-
-      <Feature />
-      <Map />
-      <Footer />
-    </div>
+        <Route path='projects' element={<ProjectsPage />} />
+      </Route>
+    </Routes>
   );
 };
 

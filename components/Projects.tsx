@@ -1,10 +1,13 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 import projectsData from '../projectsData';
 
 import './Projects.css';
 
 const Projects: FC = () => {
-  const projectsEl = projectsData.map(project => (
+  const displayedProjects = projectsData.slice(0, 6);
+
+  const projectsEl = displayedProjects.map(project => (
     <div key={project.id} className='project'>
       <img
         src={project.imageSrc}
@@ -20,6 +23,9 @@ const Projects: FC = () => {
     <>
       <div className='projects'>
         <div className='projects-container'>{projectsEl}</div>
+        <Link to='/projects' className='projects-show-more-btn'>
+          Mostrar más
+        </Link>
       </div>
     </>
   );
