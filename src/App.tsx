@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Feature from '../components/Feature';
 import Projects from '../components/Projects';
@@ -10,7 +10,7 @@ import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Map from '../components/Map';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 import { validateInput } from '../utils';
 
@@ -124,53 +124,60 @@ const App: FC = () => {
   }, []);
 
   return (
-    <div className='app-container'>
-      <div className='header-hero'>
-        <Header />
-        <div className='hero-wrapper'>
-          <Hero windowWidth={windowWidth} />
-        </div>
-      </div>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route
+          index
+          element={
+            <div className='app-container'>
+              <div className='header-hero'>
+                <div className='hero-wrapper'>
+                  <Hero windowWidth={windowWidth} />
+                </div>
+              </div>
 
-      <div className='section'>
-        <SectionInfo
-          subheading='servicios'
-          h2='Descubre nuestra experiencia'
-          number='1'
+              <div className='section'>
+                <SectionInfo
+                  subheading='servicios'
+                  h2='Descubre nuestra experiencia'
+                  number='1'
+                />
+                <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
+              </div>
+
+              <div className='section'>
+                <SectionInfo
+                  classes={{ wide: 'section-projects', center: 'center' }}
+                  subheading='proyectos'
+                  h2='Explora nuestros logros'
+                  number='2'
+                />
+                <Projects />
+              </div>
+
+              <div className='section'>
+                <div className='testimonials-container'>
+                  <SectionInfo
+                    subheading='Nuestras marcas'
+                    h2='Explora nuevas fronteras'
+                    number='3'
+                    classes={{ color: 'dark', center: 'center' }}
+                  />
+                  <Testimonials />
+                </div>
+              </div>
+
+              <div className='section'>
+                <Contact />
+              </div>
+
+              <Feature />
+              <Map />
+            </div>
+          }
         />
-        <Services windowWidth={windowWidth} setWindowWidth={setWindowWidth} />
-      </div>
-
-      <div className='section'>
-        <SectionInfo
-          classes={{ wide: 'section-projects', center: 'center' }}
-          subheading='proyectos'
-          h2='Explora nuestros logros'
-          number='2'
-        />
-        <Projects />
-      </div>
-
-      <div className='section'>
-        <div className='testimonials-container'>
-          <SectionInfo
-            subheading='Nuestras marcas'
-            h2='Explora nuevas fronteras'
-            number='3'
-            classes={{ color: 'dark', center: 'center' }}
-          />
-          <Testimonials />
-        </div>
-      </div>
-
-      <div className='section'>
-        <Contact />
-      </div>
-
-      <Feature />
-      <Map />
-      <Footer />
-    </div>
+      </Route>
+    </Routes>
   );
 };
 
