@@ -5,6 +5,7 @@ import './App.css';
 import Hero from '../components/Hero';
 import Feature from '../components/Feature';
 import Projects from '../components/Projects';
+import ProjectsPage from '../components/ProjectsPage';
 import SectionInfo from '../components/SectionInfo';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
@@ -18,6 +19,7 @@ import useNavbarVisibility from './hooks/useNavbarVisibility';
 import useSectionReveal from './hooks/useSectionReveal';
 import useLazyImages from './hooks/useLazyImages';
 import useNumericInputValidation from './hooks/useNumericInputValidation';
+import useScrollToTop from './hooks/useScrollToTop';
 
 const App: FC = () => {
   const [windowWidth, setWindowWidth] = useWindowWidth();
@@ -26,6 +28,7 @@ const App: FC = () => {
   useSectionReveal();
   useLazyImages();
   useNumericInputValidation();
+  useScrollToTop();
 
   return (
     <Routes>
@@ -80,6 +83,7 @@ const App: FC = () => {
             </div>
           }
         />
+        <Route path='projects' element={<ProjectsPage />} />
       </Route>
     </Routes>
   );
