@@ -1,10 +1,13 @@
 import { FC, useRef, useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import './Header.css';
 import beltranGroupLogo from '../src/assets/beltran-group.png';
 
 const Header: FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const [navOpen, setNavOpen] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
 
   // disable scrolling while mobile nav is open
   if (navOpen) {
@@ -15,17 +18,12 @@ const Header: FC = () => {
 
   return (
     <div ref={headerRef} className='header'>
-      <img
-        src={beltranGroupLogo}
-        className='header-logo'
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth',
-          });
-        }}
-      />
+      <Link to='/' className='header-logo-link'>
+        <img
+          src={beltranGroupLogo}
+          className='header-logo'
+        />
+      </Link>
       <nav className={`header-nav ${navOpen ? 'header-open' : ''}`}>
         <ul className='header-nav__items'>
           <li className='header-nav__item'>
@@ -33,8 +31,9 @@ const Header: FC = () => {
               onClick={() => {
                 setNavOpen(false);
               }}
-              className='nav-link'
+              className={`nav-link ${!isHome ? 'nav-link-disabled' : ''}`}
               href='section-1'
+              style={{ pointerEvents: !isHome ? 'none' : 'auto', opacity: !isHome ? 0.5 : 1 }}
             >
               Servicios
             </a>
@@ -44,8 +43,9 @@ const Header: FC = () => {
               onClick={() => {
                 setNavOpen(false);
               }}
-              className='nav-link'
+              className={`nav-link ${!isHome ? 'nav-link-disabled' : ''}`}
               href='section-2'
+              style={{ pointerEvents: !isHome ? 'none' : 'auto', opacity: !isHome ? 0.5 : 1 }}
             >
               Proyectos
             </a>
@@ -55,8 +55,9 @@ const Header: FC = () => {
               onClick={() => {
                 setNavOpen(false);
               }}
-              className='nav-link'
+              className={`nav-link ${!isHome ? 'nav-link-disabled' : ''}`}
               href='section-3'
+              style={{ pointerEvents: !isHome ? 'none' : 'auto', opacity: !isHome ? 0.5 : 1 }}
             >
               Marcas
             </a>
@@ -66,8 +67,9 @@ const Header: FC = () => {
               onClick={() => {
                 setNavOpen(false);
               }}
-              className='nav-link'
+              className={`nav-link ${!isHome ? 'nav-link-disabled' : ''}`}
               href='section-4'
+              style={{ pointerEvents: !isHome ? 'none' : 'auto', opacity: !isHome ? 0.5 : 1 }}
             >
               Contacto
             </a>

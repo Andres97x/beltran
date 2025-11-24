@@ -47,9 +47,16 @@
 }
 
 .header-logo {
-  height: 60%;
+  height: 100%;
   cursor: pointer;
   z-index: 100;
+}
+
+.header-logo-link {
+  height: 60%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .header-nav__items {
@@ -77,6 +84,10 @@
   text-decoration: none;
 }
 
+.nav-link-disabled {
+  cursor: not-allowed !important;
+}
+
 .header .header-nav__item::before {
   content: '';
   position: absolute;
@@ -91,6 +102,14 @@
 
 .header-nav__item:hover.header-nav__item::before {
   transform: translate(0, 0px);
+}
+
+.nav-link-disabled:hover ~ .header-nav__item::before {
+  transform: translate(-101%, 0px);
+}
+
+.header-nav__item:has(.nav-link-disabled):hover::before {
+  transform: translate(-101%, 0px);
 }
 
 .header-icon {
